@@ -1,0 +1,30 @@
+h1 {
+  color: darkgreen;
+}
+.headers {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  line-height: 25px;
+}
+
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+label {
+  text-transform: uppercase;
+}
+
+img {
+  float: left;
+  height: 200px;
+  margin: 10px;
+}
