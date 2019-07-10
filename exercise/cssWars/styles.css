@@ -1,0 +1,36 @@
+
+@font-face{
+    font-family: myFirstFont;
+    src: url(./assests/Stjldbl1.ttf);
+}
+
+body {
+  background-color: #111111;
+}
+
+h1 {
+  text-align: center;
+  color: #e2e80f;
+  font-size: 80px;
+  font-family: myFirstFont;
+}
+
+p {
+  color: #eeeeee;
+  font-size: 25px;
+  line-height: 50px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.spans > span {
+  text-underline-position: below;
+  text-decoration: underline;
+  color:#49DAFF;
+  cursor:grab;
+
+}
+
+#film-description {
+    font-size:10px;
+    font-style: italic;
+}
