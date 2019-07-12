@@ -1,0 +1,39 @@
+.lightPink {
+  display: inline-block;
+  background-color: #f5c6d6;
+  height: 100px;
+  margin: 5px;
+  width:99%
+}
+
+.hotPink {
+  display: inline-block;
+  background-color: #ee2e84;
+  height: 100px;
+  margin: 5px;
+  width: 24%;
+}
+
+.blue {
+  display: inline-block;
+  background-color: #85cfd8;
+  height: 100px;
+  margin: 5px;
+  width: 49%;
+}
+
+.green {
+  display: inline-block;
+  background-color: #8dc63f;
+  height: 100px;
+  margin: 5px;
+  width: 74%;
+}
+
+.orange {
+  display: inline-block;
+  background-color: #e76e34;
+  height: 100px;
+  margin: 5px;
+  width: 24%;
+}
