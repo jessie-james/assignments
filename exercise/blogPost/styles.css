@@ -9,54 +9,114 @@
 
  }
  
-.mainheader{
+#mainheader{
     background:darkred;
-    position: absolute;
-    height: 70px;
-    width:100%;
+    position: fixed;
+    height: 60px;
+    width:99%;
     text-align: center;
     padding:10px;
     font-family:"headerFont";
-    font-size: 60px;
-    }
-.posts{
-    background:grey;
-
-} 
-.postheader{
-     font-family:"headerFont";
-     font-style: oblique;
-     color:darkred;
-     font-size: 40px;
-    height: 50px;
-    width:100%;
-
-} 
-.post1{
-    font-family:"postFont";
-    font-size: 30px;
-    text-align:left;
-    background:#D3D3D3;
-    height: 500px;
-    width:100%;
-
-}
-.content{
-    font-family:"postFont";
-    font-size: 30px;
-    text-align:left;
-    background:#D3D3D3;
-    height: 500px;
-    width:100%;
-}
-.postFooter{
-    font-family:"headerFont";
-    font-style: oblique;
-    color:darkred;
     font-size: 40px;
-    height: 25px;
-    width:100%;
+    border-radius: 5px;
+    margin:0;
+    top:-5px;
+    z-index: 1;
+}
+
+#homebutton{
+    font-family:"headerFont";
+    font-size: 20px;
+    width: 80px;
+    height: 30px;
+    color:white;
+    background:darkred;
+    border:solid black 2px;
+    position: fixed;
+    top:25px;
+    left:25px;
+}
+#mainBody{
+    background:grey;
+    width: 2000px;
+    height:4000px;
+    color:white;
+    position:static;
+    top:80px;
 
 }
 
+#sidebar{
+    height:4000px;
+    width:300px;
+    background:rgb(222, 216, 216);
+    font-size: 30px;
+    color:rgb(85, 1, 1);
+    font-family:"headerFont";
+    display:inline-block;
+    position: fixed;
+    top:75px;
+    border-radius: 5px;
+    
+}
+.sidebarT{
+    position: static;
+    padding:50px;
+    text-align: center;
+} 
+#bodyposts{
+    height:4000px;
+    width: 500px;
+    display:inline-block;
+    position:static;
+}
+.posts{
+    height:700px;
+    width:700px;
+    color:whitesmoke;
+    background:rgb(74, 73, 73);
+    display:inline-block;
+    position:relative;
+    top:100px;
+    left:500px;
+    padding:40px;
+    margin:20px;
+    border-radius: 40px;
+}
+.postH{
+    font-family: "headerFont";
+    font-size: 40px;
+    color:rgb(179, 64, 64);
+    text-align:center;
+}
+.article{
+    font-family:"postFont";
+    font-size: 20px;
+    color:white;
+    text-align:left;
+}
+.postF{
+    font-family:"postFont";
+    font-size: 20px;
+    color:rgb(179, 64, 64);
+    text-align:right;
+    position: relative;
+    bottom:-130px;
+}
 
+#mainFooter{
+    background:darkred;
+    height: 20px;
+    width:100%;
+    text-align: right;
+    padding:10px;
+    font-family:"headerFont";
+    font-size: 15px;
+    border-radius: 5px;
+    margin:0;
+    position:relative;
+    bottom:-5;
+
+
+
+}
