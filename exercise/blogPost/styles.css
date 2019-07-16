@@ -1,5 +1,62 @@
-.mainHeader
-.posts
-.posts > .post1
-.posts > .post1 > .postHeader
-.posts > .post1 > 
+ @font-face {
+        font-family:"headerFont";
+        src: url("./mainHeader.ttf");
+
+ }
+ @font-face {
+        font-family:"postFont";
+        src: url("./trench100free.ttf");
+
+ }
+ 
+.mainheader{
+    background:darkred;
+    position: absolute;
+    height: 70px;
+    width:100%;
+    text-align: center;
+    padding:10px;
+    font-family:"headerFont";
+    font-size: 60px;
+    }
+.posts{
+    background:grey;
+
+} 
+.postheader{
+     font-family:"headerFont";
+     font-style: oblique;
+     color:darkred;
+     font-size: 40px;
+    height: 50px;
+    width:100%;
+
+} 
+.post1{
+    font-family:"postFont";
+    font-size: 30px;
+    text-align:left;
+    background:#D3D3D3;
+    height: 500px;
+    width:100%;
+
+}
+.content{
+    font-family:"postFont";
+    font-size: 30px;
+    text-align:left;
+    background:#D3D3D3;
+    height: 500px;
+    width:100%;
+}
+.postFooter{
+    font-family:"headerFont";
+    font-style: oblique;
+    color:darkred;
+    font-size: 40px;
+    height: 25px;
+    width:100%;
+
+}
+
+

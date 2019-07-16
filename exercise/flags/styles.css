@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+    font-size: 0;
+    background: grey;
+}
+.flags{
+    margin: 30px;
+    width: 150px;
+    height: 100px;
+    
+}
+
+#franL{
+    background: blue;
+    height: 100px;
+    width: 50px;
+    display: inline-block;
+
+}
+#franC{
+    background:white;
+    height: 100px;
+    width: 50px;
+    display: inline-block;
+   
+}
+
+
+#franR{
+    background:red;
+    height: 100px;
+    width: 50px;
+    display: inline-block;
+    
+}
+
+
+#germT{
+    background:black;
+    height: 33px;
+    width: 150px;
+    
+}
+#germM{
+    background:red;
+    height: 33px;
+    width: 150px;
+    
+}
+#germC{
+    background:yellow;
+    height: 33px ;
+    width: 150px;
+   
+}
+
+#madagascar{
+    margin: 10px;
+    display: inline-block;
+
+}
+#madL{
+    background:white;
+    display:inline-block;
+    height:100px;
+    width:50px;
+}
+
+#madT{
+    background:red;
+    height: 50px;
+    width: 100px;
+    margin: 0px 0px 50px 0px;
+    display:inline-block;
+}
+
+#madB{
+    background:forestgreen;
+    height: 50px;
+    width: 100px;
+    margin: -50px 0px 50px 50px;
+    display:inline-block;
+    }
+
+#switzerland{
+    background:red;
+    height: 100px;
+    width: 150px;
+}
+
+#switT{
+    background: white;
+    height: 50px;
+    width: 10px;
+    position: relative;
+    top:25px;
+    left:70px;
+
+
+}
+#switB{
+    background: white;
+    height: 10px;
+    width: 50px;
+    position: relative;
+    top:-5px;
+    left:50px;
+}
+
+#sweden{
+    background:blue;
+    height: 100px;
+    width: 150px;
+}
+
+#swedT{
+    background:yellow;
+    height:100px;
+    width:10px;
+    position: relative;
+    left:25px;
+
+
+}
+#swedB{
+    background:yellow;
+    height: 10px;
+    width: 150px;
+    position: relative;
+    bottom: 50px;
+}
+
+
+#gambT{
+    background:darkred;
+    height: 30px;
+    width: 150px;
+    margin: 0;
+
+}
+
+#whiteSpace{
+    background:white;
+    height:5px;
+    width: 150px;
+
+
+}
+#gambM{
+    background:darkblue;
+    height: 30px;
+    width: 150px;
+    
+}
+#gambB{
+    background:darkolivegreen;
+    height: 33px;
+    width: 150px;
+    margin: 0;
+    
+}
+#tonga{
+    background: darkred;
+    width: 150px;
+    height: 100px;
+}
+#smallTonga{
+    background:white;
+    height: 50px;
+    width: 75px;
+}
+
+#tongaT{
+    background: darkred;
+    height: 25px;
+    width: 5px;
+    position: relative;
+    top:10px;
+    left:35px;
+
+
+}
+
+#tongaB{
+    background: darkred;
+    height: 5px;
+    width: 25px;
+    position: relative;
+    top:-5px;
+    left:25px;
+}
+
+#japan{
+    background:white ;
+    width: 150px;
+    height: 100px;
+}
+
+#jcirle{
+    background:darkred;
+    height: 50px;
+    width: 50px;
+    position:relative;
+    top:25px;
+    left:50px;
+    border-radius: 50%
+}
+
+#bluesM{
+    height:11px;
+    width:150px;
+    background:blue;
+
+}
+
+#whitesM{
+    height:11px;
+    width:150px;
+    background:white;
+}
+#largeG{
+    position: relative;
+    top:-40px;
+
+}
+#smallG{
+    background:blue;
+    height: 50px;
+    width: 75px;
+    position: relative;
+    bottom: -50px;
+}
+
+#smallGT{
+    background:white;
+    height: 60px;
+    width: 11px;
+    position: relative;
+    top:0px;
+    left:33px;
+
+
+}
+#smallGB{
+    background:white;
+    height: 11px;
+    width: 75px;
+    position: relative;
+    top:-39px;
+    
+
+}
+
+
+#nigT{
+    background:darkorange;
+    height: 33px;
+    width: 150px;
+
+}
+#nigM{
+    background:white;
+    height: 33px;
+    width: 150px;
+
+}
+#nigB{
+    background:lime;
+    height: 33px ;
+    width: 150px;
+
+}
+#ncirle{
+    background:darkorange;
+    height: 35px;
+    width: 35px;
+    position:relative;
+    top: 2px;
+    left:55px;
+    border-radius: 100%
+}
+
+#mainMal{
+    background: darkred;
+    width: 150px;
+    height: 100px;
+}
+#smallMal{
+    background:darkgreen;
+    height: 50px;
+    width: 75px;
+    position:relative;
+    top:25px;
+    left:35px;
+}
+
+
+#moon{
+    background:darkgreen;
+    height: 25px;
+    width: 25px;
+    position:relative;
+    top: 10px;
+    left: 30px;
+    border-radius:50%; 
+    box-shadow: inset 5px 0 0 0 white;
+
+}
+
+
+
+
+
+      
+
