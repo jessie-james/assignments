@@ -1,0 +1,60 @@
+.style {
+  background-color: aquamarine;
+  height: 1000px;
+  width: 1000px;
+  border-radius: 20px;
+}
+
+
+.forms {
+    border-radius: 5px;
+    height: 200px;
+    width:250px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    background-color:rgb(228, 195, 163);
+    display:inline-block;
+    margin: 10px;
+    position: relative;
+    top: 150px;
+    justify-content: center;
+
+}
+input{
+    height: 40px;
+    width:150px;
+    border-radius: 5px;
+    border: solid salmon 5px;
+    background-color:rgb(228, 195, 163);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    position: relative;
+    left: 40px;
+
+}
+.top {
+   font-display: bold;
+}
+
+button {
+    border: solid salmon 5px;
+    border-radius: 5px;
+    background-color:rgb(228, 195, 163);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    justify-content: right;
+    position: relative;
+    left: 40px;
+}
+.outPutDisplay{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    border-radius: 5px;
+    border: solid salmon 5px;
+    height: 40px;
+    width:150px;
+    position: relative;
+    left: 10px;
+    margin:30px;
+
+}

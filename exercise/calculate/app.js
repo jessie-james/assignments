@@ -1,31 +1,37 @@
+const addingButton = document.querySelector("#clickAdd");
+const addOutPutDisplay = document.getElementById("outPutDisplayAdd");
+const addForm = document.querySelector("#adding");
 
+addingButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  const firstAddNum = addForm.num1.value;
+  const secondAddNum = addForm.num2.value;
+  const totalA = Number(firstAddNum )+ Number(secondAddNum);
+    addOutPutDisplay.innerHTML = totalA;
+});
 
-// Each section has two inputs to take the first and second numbers
-// Each section will have a button to perform the operation
-// You will inject the result into the HTML (not an alert)
-// Your website will have 3 colors
-// Your website will have proper padding/spacing to lay things out nicely
+const subtratctionButton = document.querySelector("#clickSub");
+const outPutDisplaySub = document.getElementById("outPutDisplaySub");
+const subForm = document.sub;
 
-let addnum1 = document.getElementById();
-let addnum2 = document.getElementById();
-let subnum1 = document.getElementById();
-let subnum2 = document.getElementById();
-let mulnum1 = document.getElementById();
-let mulnum2 = document.getElementById();
-let runadd = document.getElementById("clickadd");
-let runsub = document.getElementById("clicksub");
-let runmul = document.getElementById("clickmul");
+subtratctionButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    const firstNum = subForm.snum1.value;
+    const secondNum = subForm.snum2.value;
+    const totalA = Number(firstNum) - Number(secondNum);
+    outPutDisplaySub.innerHTML = totalA;
+});
 
-runadd.addEventListener("click", function () {
-    return addnum1 + addnum2;
-})
+const multiplyButton = document.querySelector("#clickMul");
+const outPutDisplayMul = document.getElementById("outPutDisplayMul");
+const mulForm = document.multi;
 
-runsub.addEventListener("click", function () {
-    return subnum1 - subnum2;
-})
-
-runmul.addEventListener("click", function () {
-    return mulnum1 * mulnum2;
-})
+multiplyButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const firstNum = mulForm.num1.value;
+    const secondNum = mulForm.num2.value;
+    const totalA = Number(firstNum) * Number(secondNum);
+    outPutDisplaySub.innerHTML = totalA;
+});
 
 

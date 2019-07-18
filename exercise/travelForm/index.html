@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mae Travel Airlines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mae Travel</h1>
+        <h4>Mae we take you where your heart Desires</h4>
+    </header>
+    <div id="travelForm">
+
+        <form name="travelForm">
+            <input type="text" name="firstName" placeholder=" First Name:"/>
+            <input type="text" name="lastName" placeholder=" Last Name:"/><br>
+            <input type ="number" name="age"/>Age
+            <label>Your Gender Preferance
+                <input type="radio" name="gender" value="male"> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="nonBinary"> Non-Binary<br>
+                <input type="radio" name="gender" value="ratherNotSay"> Rather Not Say
+            </label><br>
+            <label>Travel Destination
+                <select name="destination" id ="destination">
+                    <option value="paris">Paris</option>
+                    <option value="estonia">Estonia</option>
+                    <option value="equador">Equador</option>
+                </select>
+            </label>
+            <label>Dietary Restrictions<br>
+                Vegetarian<input value="Vegetarian " name="restrictions" type="checkbox"/>
+                Kosher,<input value=" Kosher " name="restrictions" type="checkbox"/>
+                Peanut Allergy<input value=" Peanut Allergy " name="restrictions" type="checkbox"/><br>
+            </label>
+            <button type="submit" value="Submit" name="submit">Submit</button>
+        </form>
+
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
