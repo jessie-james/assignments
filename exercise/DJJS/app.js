@@ -27,6 +27,7 @@ document.addEventListener("wheel", function(e) {
 
 
 
-document.addEventListener("keydown", function (e) {
-    box.style.background = keycode;
-})
+// document.addEventListener("keydown", function (e) {
+//     if()
+//     box.style.background = keycode;
+// })

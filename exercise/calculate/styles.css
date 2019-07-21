@@ -25,7 +25,7 @@ input{
     width:150px;
     border-radius: 5px;
     border: solid salmon 5px;
-    background-color:rgb(228, 195, 163);
+    background-color:rgb(226, 151, 76);
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     position: relative;
@@ -56,5 +56,6 @@ button {
     position: relative;
     left: 10px;
     margin:30px;
+    background-color:rgb(226, 151, 76);
 
 }

@@ -1,0 +1,205 @@
+/* header, 
+    h1,
+div= 
+    class-baddieScoreCard, 
+        ul=class-baddies, input= class-"numberIndividual" 
+    class="totalCaught"
+footer= p 
+        a herf
+        p
+        */
+body{
+font-family: fantasy;
+
+
+}
+header {
+    background: grey;
+    color: white;
+    font-family: fantasy;
+}
+h1{
+    text-align: center;
+    margin: 0px;
+}
+.baddieScoreCard {
+    background: darkgrey;
+    margin: 0;
+}
+
+form{
+    display:inline-block;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+}
+.numberIndividual{
+    border-style: hidden;
+    background: gray; 
+}
+::placeholder{
+    color:white;
+    font-family: fantasy;
+}
+.baddies{
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    border-radius: 10px;
+    display: flex;
+    width: 20%;
+    height: 20%;
+    margin: auto;
+}
+
+button{
+    width: 25%;
+    height: 70%;
+    background: gray;
+    border-radius: 15px;
+    left: 35%;
+    border: solid 2px;
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin: 2%;
+}
+
+#baddieTotalPrice{
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    
+}
+footer{
+    display:flex;
+    background: gray; 
+}
+
+.marioInfo{
+    position: relative;
+    left: 30px;
+    font-size:10px;
+    font-style: oblique;
+}
+#address{
+    font-size:20px;
+
+}
+.mario{
+    margin: 0px 5px;
+}
+#email{
+    display: none;
+}
+
+@media(min-width: 1000px){
+     body{
+        font-size:25px;
+    }
+    .baddieScoreCard{
+        height:500px;
+    }
+     ::placeholder{
+    text-align: center;
+}
+    button{
+    margin: 200px 30px 0px 0px;
+    font-size: 80%;
+    width: 20%;
+    
+    }
+  
+    .baddies{
+        display:inline-block;
+        width:30%;
+    
+}
+#baddieTotalPrice{
+        position: relative;
+        font-size: 100%;
+        left: 5%;
+        
+}
+
+ .mario{
+        font-size: 80%;
+        margin: 0;
+        display: inline-block;
+
+    }
+    a{
+        position: relative;
+        left: 20%;
+        margin:5px 0px;
+    }
+    #email{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .address{
+        display: inline-block;
+        position: relative;
+        left: 15%;
+        margin:5px 0px;
+        
+        
+
+    }
+}
+
+
+
+@media(min-width: 1500px){
+    body{
+        font-size:30px;
+    }
+
+    form{
+    display:block;
+
+}
+   
+    .baddies{
+        display:inline-block;
+        width:30%;
+
+}
+    .numberIndividual{
+        height: 50px;
+        width: 150px;
+        border-radius: 10px;
+
+    }
+
+    ::placeholder{
+    font-size:100%;
+    text-align: center;
+    }
+
+    button{
+    margin: 0 4%;
+    font-size: 80%;
+    width: 10%;
+    display: inline-block;
+}
+
+
+    .baddiesTotalPrice{
+        width:50%
+}
+    footer{
+        width:100%;
+    
+
+
+    }
+   
+
+}
+

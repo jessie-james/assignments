@@ -1,0 +1,240 @@
+* {
+    /* box-sizing: border-box;  */
+    margin:0;
+}
+
+
+/*#74A0B3
+ #D9F4FF  
+ #BFECFF 
+ #B38D62 #8A6D4C 
+ #FFE1BF #D6BDA1 
+*/
+
+
+/* <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet"> */
+
+
+body{
+    height:900px;
+    font-family: 'Poiret One', cursive;
+    
+}
+
+.container {
+    background-color: #D9F4FF;
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 5% auto 5%;
+    grid-template-areas: 
+        "n n n n n n n n n n n n"
+        "s s s m m m m m m m m m"
+        "f f f f f f f f f f f f";
+}
+
+
+
+
+
+.nav{
+    grid-area: n;
+    background-color:#A1C6D6;
+    display:flex;
+    justify-content: space-between;
+}
+
+h1{
+    padding:10px;
+    text-align:center;
+}
+
+#maetheme{
+    font-family: 'Shadows Into Light', cursive;
+    text-decoration: overline;
+    color:  #8A6D4C;
+    margin:auto 6px;
+}
+ul{
+    display:none;
+    
+}
+
+li{
+    padding:4px;
+}
+.sideBar{
+    grid-area: s;
+    background-color:#5A7B8A;
+    display: flex;
+    justify-content: center;
+   
+
+}
+.sideBarArticle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
+.sideBarArticle > header{
+    font-size:1.5em;
+    text-align: center;
+    padding:2px;
+}
+
+.profile{
+    height:60px;
+    width: 60px;
+    
+    border-radius: 100%;
+    background-size: cover;
+    background-image: url("./images/00100sPORTRAIT_00100_BURST20190529182449373_COVER.jpg")
+}
+
+.mobileSideBar{
+    display:none;
+}
+.mainContent{
+    grid-area: m;
+    background-color: #D6BDA1; 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.sectionTitle{
+    display:flex;
+    text-align: center;
+
+}
+.figures{
+    display:flex;
+    background-color:#BFECFF;
+    margin:0;
+    height:50%;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+
+}
+figure {
+    display:flex;
+    height: 50%;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+   
+    /* width:10%; */
+}
+
+  
+.floralArt{
+    display:flex;
+    margin:10px 0 0 0;
+    border-radius: 6%;
+    margin:none;
+    height:90%;
+    width: 90%;
+    background-size: cover;
+    background-image: url("./images/1d2a7d98eb81f905b7afc8e4d6b2f980.jpg")
+
+}
+.otherArt{
+    display:flex;
+    margin:10px 0 0 0;
+    border-radius: 6%;
+    margin:none;
+    height:90%;
+    width: 90%;
+    background-size: cover;
+    background-image: url("./images/1d2a7d98eb81f905b7afc8e4d6b2f980.jpg")
+
+}
+
+
+.footer{
+    grid-area: f;
+    background-color:#74A0B3;
+    display:flex;
+    
+
+
+}
+
+footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%
+
+}
+
+
+.footerlist{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    margin:0;
+    width:100%;
+    padding:0;
+
+
+}
+.footerlist >header{
+    text-align: center;
+    margin:2%;
+    text-decoration: underline;
+    
+    
+}
+.footListItems{
+    display:none;
+}
+
+
+
+
+@media(min-width: 768px){
+.mobileSideBar{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin:5px;
+    justify-content: space-around;
+    
+
+}
+p{
+    margin:5px;
+
+}
+    ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding:0;
+    margin:auto 10px;
+
+    }
+
+    .footListItems{
+    display:flex;
+    justify-content: center;
+    padding:0 5%;
+    text-align: center;
+}
+
+.container {
+    grid-template-rows: 5% auto 15%;
+
+}
+}
