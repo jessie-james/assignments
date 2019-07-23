@@ -27,7 +27,7 @@ body{
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 5% auto auto auto 5%;
+    grid-template-rows: 5% auto auto auto 2%;
     grid-template-areas: 
         "n n n n n n n n n n n n"
         "s s s m m m m m m m m m"
@@ -186,7 +186,10 @@ footer{
     
 }
 .footListItems{
-    display:none;
+    display:flex;
+    justify-content: center;
+    padding:0 5%;
+    text-align: center;
 }
 
 

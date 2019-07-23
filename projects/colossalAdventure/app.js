@@ -1,21 +1,4 @@
 
-//Weeping Angels
-//Silents
-//Kahler cyborg
-//river song
-
-//hideEchoBack: true // The typed text on screen is hidden by `*` (default).
-
-
-// readlineSync.setDefaultOptions({ limit: ['green', 'yellow', 'red'] });
-
-// direction = readlineSync.keyIn('Left or Right? ', { limit: 'lr' }); // 'l' or 'r'
-// dice = readlineSync.keyIn('Roll the dice, What will the result be? ',
-//     { limit: '$<1-6>' }); // range of '1' to '6'
-
-
-// grasp on using functions, loops, and conditionals 
-
 // Project Requirements:
 // Console must greet player with a fun message
 // Console must ask for the player's name and store it
@@ -40,6 +23,19 @@ const readline = require("readline-sync");
 const { question, keyInYN, keyInSelect, prompt } = readline;
 
 let options = ["run", "attack"];
+const gameOver = true;
+
+function Person(username, currentlife =10, arr, print()) {
+    this.username = username;
+    this.life = currentlife;
+    this.awards = [arr];
+    this.print = function () { console.log(this.userame + "  you currently have" +this.life + " and have been awareded " +  this.awards }
+}
+function Enemy(enemyName, currentlife, attackPower) {
+    this.enemyName = enemyName;
+    this.life = currentlife;
+    this.attackPower =attackPower;
+}
 
 function randomEnemy () {
     const enemymin = 1;
@@ -55,22 +51,68 @@ function chanceOfEscape(){
     return escapeLikelyhood;
 }
 
-function attackPower() {
+function userattackPower() {
     const powermin = 0;
     const powermax = 1;
     const attakingPower = Math.floor(Math.random() * (+powermax - +powermin)) + +powermin;
-    return acttakingPower;
+    return attakingPower;
     
 }
 
-function lifeForce() {
+function lifeForce(currentlife) {
     const lifemin = 0;
     const lifemax = 10;
     const lifetaken = Math.floor(Math.random() * (+lifemax - +lifemin)) + +lifemin;
-    const currentLife = Number(currentLife) - Number(lifetaken);
-    return currentLife;
+    return currentlife -= lifetaken;
 }
 
+
+function takeAction() {
+    const actionTaken = keyInSelect(options, "What would you like to do.")
+    if (actionTaken === 0) {
+        chanceOfEscape()
+        if (escapeLikelyhood === 0) {
+            console.log("Shoot DEADEND! your trapped! You must attack")
+            userattackPower();
+            //darlk power
+            //darlek life
+            //userlife
+            // consle.log escape and. 
+        } else {
+            console.log("You escaped! Lets keep exploring")
+        }
+    } else {
+        console.log('alright!  You got this')
+        userattackPower()
+        //darlk power
+            //darlek life
+            //userlife
+            // consle.log escape and. 
+    }
+}
+ 
+function maingame() {
+    while (!gamveover) {
+        randomEnemy();
+        switch (enemySelected) {
+            case 0:
+                console.log("Oh NO! You have run into a Daleks.")
+                takeAction()
+                break; 
+            case 1:
+                console.log("Oh NO! You have run into the Kahler Cyborg.")
+                takeAction()
+            case 2:
+                console.log("Oh NO! You have run into a Weeping Angles. Close your EYES our you will die Instantly!")
+                takeAction()
+            case 3: console.log("Oh NO! You have run into the Silents")
+                takeAction()
+
+        
+    } else {
+        console.log(`${username}, you have have died an Epic death!Doctor who would be proud. During your life you gained ${awards}. Congratulations!`)
+    }
+}
 
 
 
@@ -79,96 +121,29 @@ function lifeForce() {
 
 //Start game//
 const userName = question("What is your name? ");
-console.log (`Welcome ${userName} to the Tardis! Let's start the game.  `);
+console.log (`Welcome ${username} to the Tardis! Let's start the game.  `);
 const walk = question(`Press "w" to walk around the Tardis.  `);
 
 
-
-const walking = (walk) => {
-    if (walk === 'w') {
-        startgame( );
-    } else {
-        console.log(`Are you scared? If you don't walk around you will be stuck in this loop forever!`)
-        walk = readline.question(`Press "w" to walk around the Tardis.  `)
-    }
-}
-const gameOver = false;
-
-function gameRuning() {
-    while (gameover === false) {
-        rungame()
-    } else {
-        console.log("You have died and Epic death by the hands of .... Doctor who would be proud.")
-    }
-
-
+    while (isalive && !youWon) {
+        const walking = (walk) => {
+            while (walk !== 'w') {
+                console.log(`Are you scared? If you don't walk around you will be stuck in this loop forever!`)
+                walk = readline.question(`Press "w" to walk around the Tardis.  `)
+            }
 }
 
-
-
-       
-//             if (randomEnemy === 1) {
-//                 console.log("Oh NO! You have run into a Daleks.")
-//                 const actionTaken = keyInSelect(options, "What would you like to do.");
-//                 switch (actionTaken) {
-//                     case 0:
-                     
-//                             if (escapeLikelyhood === true;) {
-//                                 console.log("You escaped! Lets keep exploring");
-//                                 walk= question(`Press "w" to  continute walking around the Tardis.  `);
-//                             } else {
-//                                 console.log("Shoot DEADEND! your trapped!");
-                                
-//                             }
-                            
-                            
-//                     //     complete = true;
-//                     //     break;
-//                     // case 1:
-//                     //     if (!foundKey) {
-//                     //         foundKey = true;
-//                     //         console.log(“You found a key behind a brick in the wall!“);
-//                     //     } else {
-//                     //         console.log(“You already have a key.“);
-//                     //     }
-
-
-                
-//             } else if (randomEnemy === 2) {
-//                 console.log("Oh NO! You have run into a Weeping Angels.")
-//                 const actionTaken = keyInSelect(options, "What would you like to do.");
-                
-//             } else {
-//                 //randonEnemy === 3
-//                 console.log("Oh NO! You have run into a Kahler cyborg.")
-//                 const actionTaken = keyInSelect(options, "What would you like to do.");
-
-//             }
-//         }
-
-
-
-
-
-//             if (dalek === 'a') {
-//                 const attackMin = 1;
-//                 const attackMax = 5;
-//                 const attackNum = Math.floor(Math.random() * (+attackMax - +attackMin)) + +attackMin; 
-//                 console.log(" you attacked at the power of" + attackNum) 
-//             }
-//         }
-//     }
-// }
-
-
-
-const walking = (walk) => {
-    if(walk === 'w') {
-        startgame();
-    } else {
-        console.log(`Are you scared? If you don't walk around you will be stuck in this loop forever!`)
-        walk = readline.question(`Press "w" to walk around the Tardis.  `)
+    else {
+    maingame();
     }
 }
+
+
+
+
+
+
+
+
 
 walking(walk);
