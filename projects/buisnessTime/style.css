@@ -16,7 +16,7 @@
 
 
 body{
-    height:900px;
+    height:1000px;
     font-family: 'Poiret One', cursive;
     
 }
@@ -27,7 +27,7 @@ body{
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 5% auto 5%;
+    grid-template-rows: 5% auto auto auto 5%;
     grid-template-areas: 
         "n n n n n n n n n n n n"
         "s s s m m m m m m m m m"
@@ -56,12 +56,20 @@ h1{
     color:  #8A6D4C;
     margin:auto 6px;
 }
-ul{
-    display:none;
-    
+ul{ 
+    padding:0;
+    display:flex;
+    align-items:center;
+  
 }
-
+#menu{
+    height: 20px;
+    widows: 20px;
+    background:#A1C6D6;
+    margin:5px;
+}
 li{
+    display:none;
     padding:4px;
 }
 .sideBar{
@@ -95,7 +103,7 @@ li{
     background-image: url("./images/00100sPORTRAIT_00100_BURST20190529182449373_COVER.jpg")
 }
 
-.mobileSideBar{
+.webSideBar{
     display:none;
 }
 .mainContent{
@@ -109,55 +117,36 @@ li{
 }
 .sectionTitle{
     display:flex;
+    justify-content: center;
     text-align: center;
+    font-size: 1em;
 
 }
 .figures{
     display:flex;
     background-color:#BFECFF;
     margin:0;
-    height:50%;
+    height:100%;
     justify-content: center;
     width: 100%;
     align-items: center;
 
-
 }
 figure {
     display:flex;
-    height: 50%;
-    width: 50%;
-    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
     justify-content: center;
-
-
-   
-    /* width:10%; */
+     align-items: center;
+     flex-direction: column;
 }
 
-  
-.floralArt{
-    display:flex;
-    margin:10px 0 0 0;
-    border-radius: 6%;
-    margin:none;
-    height:90%;
-    width: 90%;
-    background-size: cover;
-    background-image: url("./images/1d2a7d98eb81f905b7afc8e4d6b2f980.jpg")
-
-}
-.otherArt{
-    display:flex;
-    margin:10px 0 0 0;
-    border-radius: 6%;
-    margin:none;
-    height:90%;
-    width: 90%;
-    background-size: cover;
-    background-image: url("./images/1d2a7d98eb81f905b7afc8e4d6b2f980.jpg")
-
-}
+.images{
+    margin:5px;
+    height:60%;
+    width: 60%;
+    /* background-size: cover; */
+ } 
 
 
 .footer{
@@ -204,7 +193,7 @@ footer{
 
 
 @media(min-width: 768px){
-.mobileSideBar{
+.webSideBar{
     display:flex;
     flex-direction: column;
     text-align: center;
@@ -217,7 +206,7 @@ p{
     margin:5px;
 
 }
-    ul{
+ul{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -225,6 +214,22 @@ p{
     margin:auto 10px;
 
     }
+#menu{
+    display:none;
+}
+li{
+    display:flex;
+
+}
+.sectionTitle{
+    display:flex;
+    height: 50%;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+
+}
 
     .footListItems{
     display:flex;
@@ -233,6 +238,10 @@ p{
     text-align: center;
 }
 
+body{
+    font-size: 1.2em;
+    
+}
 .container {
     grid-template-rows: 5% auto 15%;
 

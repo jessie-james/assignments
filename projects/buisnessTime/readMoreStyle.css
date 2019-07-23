@@ -1,0 +1,169 @@
+*{
+    margin:0;
+}
+body{
+    height:1000px;
+    
+}
+
+.container {
+    background-color: #D9F4FF;
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% auto  10%;
+    grid-template-areas: 
+        "n n n n n n n n n n n n"
+        "s s s s s s s s s s s s "
+        "f f f f f f f f f f f f";
+}
+
+
+
+
+
+.nav{
+    grid-area: n;
+    background-color:#A1C6D6;
+    display:flex;
+    justify-content: space-between;
+}
+
+h1{
+    padding:5px;
+    text-align:center;
+}
+
+#maetheme{
+    font-family: 'Shadows Into Light', cursive;
+    text-decoration: overline;
+    color:  #8A6D4C;
+    margin:auto 6px;
+}
+ul{ 
+    padding:0;
+    display:flex;
+    align-items:center;
+  
+}
+
+#menu{
+    height: 20px;
+    widows: 20px;
+    background:#A1C6D6;
+    margin:5px;
+}
+.sideBarArticle{
+    grid-area: s;
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
+    align-content: center;
+    font-size:1.2em;
+}
+
+.article{
+    margin: 10px;
+    background:#A1C6D6;
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    border-radius: 2%;
+    width: 90%;
+    height: 80%
+}
+p{
+    margin:10px;
+
+}
+li{
+    display:none;
+    padding:4px;
+}
+
+.profile{
+    height:60px;
+    width: 60px;
+    border-radius: 100%;
+    background-size: cover;
+    background-image: url("./images/00100sPORTRAIT_00100_BURST20190529182449373_COVER.jpg");
+    display:flex;
+    align-self:center;
+}
+
+
+
+.footer{
+    grid-area: f;
+    background-color:#74A0B3;
+    display:flex;
+    
+
+
+}
+
+footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%
+
+}
+
+
+.footerlist{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    margin:0;
+    width:100%;
+    padding:0;
+
+
+}
+.footerlist >header{
+    text-align: center;
+    margin:2%;
+    text-decoration: underline;
+    
+    
+}
+.footListItems{
+    display:none;
+}
+
+
+@media(min-width: 768px){
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding:0;
+    margin:auto 10px;
+
+    }
+#menu{
+    display:none;
+}
+
+li{
+    display:flex;
+
+}
+
+    .footListItems{
+    display:flex;
+    justify-content: center;
+    padding:0 5%;
+    text-align: center;
+}
+
+body{
+    font-size: 1.2em;
+    
+}
+}
