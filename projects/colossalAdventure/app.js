@@ -37,21 +37,46 @@ function Enemy(enemyName, currentlife, attackPower) {
     this.attackPower =attackPower;
 }
 
-function randomEnemy () {
-    const enemymin = 1;
-    const enemymax = 4;
-    const enemySelected = Math.floor(Math.random() * (+enemymax - +enemymin)) + +enemymin;
-    return enemySelected;
+
+function exploration() {
+    let random = Math.floor(Math.random() * 4)
+    if (random === 4) {
+        console.log('Looks like this  part of the Tardis is a dead end. Lets keep looking.')
+    } else if (random === 0) {
+        console.log(`This is  an interesting door door Should we go explore?`)
+        // findRiver()
+    } else
+        encounter();
+    
+}
+
+function findRiver(){
+
+}
+
+function encounter() {
+    let enemy = enemies[Math.floor(Math.random() * enemies.length)]
+    console.log(`You have encountered ${enemy.name}`)
+    let action = readline.keyInSelect(options, `What do you want to do?`)
+    if (action === 0) {
+        console.log('Okay lets make a run for it')
+        chanceOfEscape()
+    } else {
+        attack(enemy)
+    }
 }
 
 function chanceOfEscape(){
-    const escapemin = 1;
-    const escapemax = 2;
-    const escapeLikelyhood = Math.floor(Math.random() * (+escapemax - +escapemin)) + +escapemin;
-    return escapeLikelyhood;
+    let escapeLikelyhood = Math.floor(Math.random() * 2)
+    if (escapeLikelyhood === 0) {
+        console.log(`That was Luckly we got away! Guess its time to keep looking For River!`)
+    } else {
+        console.log(`Your trapped. I guess you Have to fight it anyway! GOOD LUCK!`)
+        attack();
+    }
 }
 
-function userattackPower() {
+function attackPower() {
     const powermin = 0;
     const powermax = 1;
     const attakingPower = Math.floor(Math.random() * (+powermax - +powermin)) + +powermin;
@@ -125,25 +150,4 @@ console.log (`Welcome ${username} to the Tardis! Let's start the game.  `);
 const walk = question(`Press "w" to walk around the Tardis.  `);
 
 
-    while (isalive && !youWon) {
-        const walking = (walk) => {
-            while (walk !== 'w') {
-                console.log(`Are you scared? If you don't walk around you will be stuck in this loop forever!`)
-                walk = readline.question(`Press "w" to walk around the Tardis.  `)
-            }
-}
-
-    else {
-    maingame();
-    }
-}
-
-
-
-
-
-
-
-
-
-walking(walk);
+  
