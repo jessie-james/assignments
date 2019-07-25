@@ -83,9 +83,9 @@ ______(_@_)_______
 
 function reEnterTardis() {
     let retunToTardis = Math.floor(Math.random() * 3)
-    if (retunToTardis > 2) {
+    if (retunToTardis === 0) {
         console.log('That was a close one. I Think I felt the Tardis disappearing.')
-    } else if (retunToTardis === 0) {
+    } else if (retunToTardis > 1) {
         console.log('Oh No!! The Tardis is gone. I think we are traped.... Wait who/ what is that in the distance?')
         const chase = keyInYN(`do you want to find out who that is?`)
         if (chase === true) {
@@ -116,7 +116,7 @@ function reEnterTardis() {
                 alive = false;
             }
         } else {
-            console.log('Oh No!! The Tardis is gone. I think we are traped')
+            console.log(`well that was our only hope.`)
             alive = false;
         
         }
@@ -318,7 +318,7 @@ _______(_@_)_______
  | ||_|| | ||_|| |         
  |       |       |        
  *****************
-Let's start the game.  `);
+Let's start the game! You should know there are only 2 ways to win but alot of ways to die. 1. defeat all the enemies. 2. find River! GOOK LUCK!`);
 
 
 
@@ -335,9 +335,46 @@ while (alive && !youWon) {
         alive = false;
     }
 } if (alive === false) {
-    console.log(`${player1.username} you have died!`);
+    console.log(`
+               ...                            
+             ;::::;                           
+           ;::::; :;                          
+         ;:::::'   :;                         
+        ;:::::;     ;.                        
+       ,:::::'       ;           OOO\         
+       ::::::;       ;          OOOOO\        
+       ;:::::;       ;         OOOOOOOO       
+      ,;::::::;     ;'         / OOOOOOO      
+    ;:::::::::. ,,,;.         /  / DOOOOOO    
+  .';:::::::::::::::::;,     /  /     DOOOO   
+,:::::: ;:::::: ;;;;:::: ;, /  /        DOOO  
+; ::::::'::::::;;;::::: ,#/  /           DOOO 
+: :::::::;:::::: ;;::: ;:: #  /            DOOO
+:: :::::::;:::::::: ;:::: # /               DOO
+:::::::: ;:::::: ;::::::#/                   DOO
+ :::::::::: ;; ;:::::::::##                   OO
+ ::::::::::: ;::::::::;:::#                   OO
+ ::::: ::::::::::::;': ;:: #                   O 
+::::::::::::: ; ' /  / :#                  
+:::::: :::::;'  /  /   #              
+
+    ${player1.username} you have died!`);
     
 } else if (youWon === true) {
-    console.log(`CONGRATULATIONS ${player1.username} YOU WON`);
+    console.log(`
+                                               888            
+                                               888            
+                                               888            
+ .d8888b .d88b. 88888b.  .d88b. 888d888 8888b. 888888.d8888b  
+d88P"   d88""88b888 "88bd88P"88b888P"      "88b888   88K      
+888     888  888888  888888  888888    .d888888888   "Y8888b. 
+Y88b.   Y88..88P888  888Y88b 888888    888  888Y88b.      X88 
+ "Y8888P "Y88P" 888  888 "Y88888888    "Y888888 "Y888 88888P' 
+                             888                              
+                        Y8b d88P                              
+                         "Y88P"                               
+                 ${player1.username} 
+    
+    YOU WON`);
 
 }

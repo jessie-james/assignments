@@ -3,60 +3,6 @@
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 100px;
-  /* auto makes it responsive */
-  /* fr = fractions takes up a fraction fo the window- also is responsive */
-  border: 5px solid #ffcc5c;
-}
-.container > div {
-  display: flex;
-  justify-content: space-between; /* this will only apply to the child  which is div 1.1 class name "one"*/
-  align-items: center;
-  font-size: 2em;
-  color: #ffeead;
-}
-
-
-.header {
-    grid-column: 1/-1;
-}
-
-.menu {
-     grid-column: 1/2;
-}
-
-.content {
-     grid-column: 2/-1;
-}
-
-.footer {
-    grid-column: 1 / -1;
-}
-
-
-html,
-body {
-  background-color: #ffeead;
-  margin: 10px;
-}
-
-.container > div:nth-child(1n) {
-  background-color: #96ceb4;
-}
-
-.container > div:nth-child(3n) {
-  background-color: #88d8b0;
-}
-
-.container > div:nth-child(2n) {
-  background-color: #ff6f69;
-}
-
-.container > div:nth-child(4n) {
-  background-color: #ffcc5c;
-}
-
-.one{
-    background: black;
-    position: relative;
+    grid-template-rows: auto auto auto;
+    grid-area: 
 }
