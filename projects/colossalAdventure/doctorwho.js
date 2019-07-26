@@ -4,10 +4,9 @@ const { question, keyInYN, keyInSelect, prompt, keyIn } = readline;
 //////////set Variables///////
 let alive = true;
 let youWon = false;
-let dalek = new Enemy("Darlek", 10, 10, "Sonic Screw Driver")
-   
+let dalek = new Enemy("Darlek", 10, 10, "Sonic Screw Driver")  
 let silent = new Enemy("Silents", 5, 25, "Tally Marks");
-let weepingAngels = new Enemy("Weeping Angles", 40, 4, "Mirror")
+let weepingAngels = new Enemy("Weeping Angles", 50, 5, "Mirror")
 const enemies = [dalek, silent, weepingAngels]
 
 /////////set functions//////
@@ -223,7 +222,7 @@ function attack(enemy) {
         }
     } else if (enemy.life <= 0){
         console.log(`You have Defeated ${enemy.name}. Please collect ${enemy.token}`)
-        player1.life += 6;
+        player1.life += 5;
         if (enemy.name === "Darlek") {
             console.log(`  
       .-.
