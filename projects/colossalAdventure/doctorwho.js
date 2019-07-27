@@ -81,10 +81,10 @@ ______(_@_)_______
 }
 
 function reEnterTardis() {
-    let retunToTardis = Math.floor(Math.random() * 3)
+    let retunToTardis = Math.floor(Math.random() * 2)
     if (retunToTardis === 0) {
         console.log('That was a close one. I Think I felt the Tardis disappearing.')
-    } else if (retunToTardis > 1) {
+    } else if (retunToTardis > 0) {
         console.log('Oh No!! The Tardis is gone. I think we are traped.... Wait who/ what is that in the distance?')
         const chase = keyInYN(`do you want to find out who that is?`)
         if (chase === true) {
@@ -93,7 +93,7 @@ function reEnterTardis() {
                 console.log("We found RIVER. CONGRATULATIONS YOU HAVE WON THE GAME.")
                 player1.awards.push("Soncic Screw Driver")
                 youWon = true;
-            } else if (isItRiver === 1) {
+            } else if (isItRiver > 0) {
                 console.log(`is that the USS Enterprise??`)
                 console.log(`
                    ___

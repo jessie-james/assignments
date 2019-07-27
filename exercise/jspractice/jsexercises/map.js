@@ -140,50 +140,122 @@
 // //     return a + b
 // // })
 
-// var voters = [
-//     { name: 'Bob', age: 30, voted: true },
-//     { name: 'Jake', age: 32, voted: true },
-//     { name: 'Kate', age: 25, voted: false },
-//     { name: 'Sam', age: 20, voted: false },
-//     { name: 'Phil', age: 21, voted: true },
-//     { name: 'Ed', age: 55, voted: true },
-//     { name: 'Tami', age: 54, voted: true },
-//     { name: 'Mary', age: 31, voted: false },
-//     { name: 'Becky', age: 43, voted: false },
-//     { name: 'Joey', age: 41, voted: true },
-//     { name: 'Jeff', age: 30, voted: true },
-//     { name: 'Zack', age: 19, voted: false }
-// ];
+// // var voters = [
+// //     { name: 'Bob', age: 30, voted: true },
+// //     { name: 'Jake', age: 32, voted: true },
+// //     { name: 'Kate', age: 25, voted: false },
+// //     { name: 'Sam', age: 20, voted: false },
+// //     { name: 'Phil', age: 21, voted: true },
+// //     { name: 'Ed', age: 55, voted: true },
+// //     { name: 'Tami', age: 54, voted: true },
+// //     { name: 'Mary', age: 31, voted: false },
+// //     { name: 'Becky', age: 43, voted: false },
+// //     { name: 'Joey', age: 41, voted: true },
+// //     { name: 'Jeff', age: 30, voted: true },
+// //     { name: 'Zack', age: 19, voted: false }
+// // ];
 
-// let youngvoters = []
-// let middlevoter = []
-// let oldvoter =[]
-// const votersager = voters.map(voter => {
-//     if (voter.age < 26) {
-//         youngvoters.push(voter.name)   
-//     } else if (voter.age > 26 && voters.age < 36) {
-//         middlevoter.push(voter.name)
-//     } else {
-//         oldvoter.push(voter.name)
-//     }
+// // let youngvoters = []
+// // let middlevoter = []
+// // let oldvoter =[]
+// // const votersager = voters.map(voter => {
+// //     if (voter.age < 26) {
+// //         youngvoters.push(voter.name)   
+// //     } else if (voter.age > 26 && voters.age < 36) {
+// //         middlevoter.push(voter.name)
+// //     } else {
+// //         oldvoter.push(voter.name)
+// //     }
         
-// })
-// console.log( youngvoters)
-//     // your code here
+// // })
+// // // console.log( youngvoters)
+// // //     // your code here
 
-const scores = [1, 3, 5, 2, 90, 20] 
-    const leastToGreatest = scores.sort((a, b) => {
-        return a - b
-    })
-
-
-console.log(leastToGreatest)
+// // const scores = [1, 3, 5, 2, 90, 20] 
+// //     const leastToGreatest = scores.sort((a, b) => {
+// //         return a - b
+// //     })
 
 
+// // console.log(leastToGreatest)
 
-const greatestoLeast = scores.sort((a, b) => {
-    return a + b
+
+
+// // const greatestoLeast = scores.sort((a, b) => {
+// //     return a + b
+// // })
+
+
+// // console.log(greatestoLeast)
+
+// // function collectAnimals(...nums) {
+    
+// //     console.log(nums)
+// //     return nums
+// // }
+// // collectAnimals("dog", "cat", "mouse", "jackolope", "platypus");
+
+// // function combineFruit(fruit, sweets, vegetables) {
+// //     // console.log(nums)
+// //     const props = {fruit, sweets, vegetables}
+// //     console.log(props)
+// //     return props
+// // }
+
+// // combineFruit(["apple", "pear"],
+// //     ["cake", "pie"],
+// //     ["carrit"])
+
+
+
+// const vacation = {
+//     location: "Burly Idaho",
+//     duration: "2 weeks"
+// };
+
+// function parseSentence() {
+//     const { location, duration } = vacation; 
+//     console.log(`We're going to have a good time in ${location} for ${duration}`)
+//     return `We're going to have a good time in ${location} for ${duration}`
+// }
+// parseSentence()
+ 
+// function returnFirst(items) {
+//     const [firstItem ]= items ; /*change this line to be es6*/
+//     return firstItem
+// }
+// returnFirst()
+
+// const favoriteActivities = ["magnets", "snowboarding", "philanthropy", "janitor work", "eating"];
+
+// function returnFavorites(arr) {
+//     const [one, two ,three, four, five ] = arr
+//     return console.log(`My top three favorite activities are, ${one}, ${three}, and ${five}`)
+
+// }
+
+// returnFavorites(favoriteActivities)
+
+const realAnimals = ["dog", "cat", "mouse"];
+const magicalAnimals = ["jackolope"];
+const mysteriousAnimals = ["platypus"];
+function combineAnimals() {
+
+}
+function destruction(arr) {
+    const [one, two three] = arr
+    
+}
+
+combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals);
+
+// ["dog", "cat", "mouse", "jackolope", "platypus"]
+
+var numbers = [a, b, c, d, e];
+
+
+
+const product = numbers.reduce((acc, number) => {
+    return acc * number;
+
 })
-
-
-console.log(greatestoLeast)
