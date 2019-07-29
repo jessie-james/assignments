@@ -208,54 +208,317 @@
 
 
 
-// const vacation = {
-//     location: "Burly Idaho",
-//     duration: "2 weeks"
-// };
+// // const vacation = {
+// //     location: "Burly Idaho",
+// //     duration: "2 weeks"
+// // };
 
-// function parseSentence() {
-//     const { location, duration } = vacation; 
-//     console.log(`We're going to have a good time in ${location} for ${duration}`)
-//     return `We're going to have a good time in ${location} for ${duration}`
-// }
-// parseSentence()
+// // function parseSentence() {
+// //     const { location, duration } = vacation; 
+// //     console.log(`We're going to have a good time in ${location} for ${duration}`)
+// //     return `We're going to have a good time in ${location} for ${duration}`
+// // }
+// // parseSentence()
  
-// function returnFirst(items) {
-//     const [firstItem ]= items ; /*change this line to be es6*/
-//     return firstItem
+// // function returnFirst(items) {
+// //     const [firstItem ]= items ; /*change this line to be es6*/
+// //     return firstItem
+// // }
+// // returnFirst()
+
+// // const favoriteActivities = ["magnets", "snowboarding", "philanthropy", "janitor work", "eating"];
+
+// // function returnFavorites(arr) {
+// //     const [one, two ,three, four, five ] = arr
+// //     return console.log(`My top three favorite activities are, ${one}, ${three}, and ${five}`)
+
+// // }
+
+// // returnFavorites(favoriteActivities)
+
+// const realAnimals = ["dog", "cat", "mouse"];
+// const magicalAnimals = ["jackolope"];
+// const mysteriousAnimals = ["platypus"];
+// function combineAnimals() {
+
 // }
-// returnFirst()
-
-// const favoriteActivities = ["magnets", "snowboarding", "philanthropy", "janitor work", "eating"];
-
-// function returnFavorites(arr) {
-//     const [one, two ,three, four, five ] = arr
-//     return console.log(`My top three favorite activities are, ${one}, ${three}, and ${five}`)
-
-// }
-
-// returnFavorites(favoriteActivities)
-
-const realAnimals = ["dog", "cat", "mouse"];
-const magicalAnimals = ["jackolope"];
-const mysteriousAnimals = ["platypus"];
-function combineAnimals() {
-
-}
-function destruction(arr) {
-    const [one, two three] = arr
+// function destruction(arr) {
+//     const [one, two three] = arr
     
+// }
+
+// combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals);
+
+// // ["dog", "cat", "mouse", "jackolope", "platypus"]
+
+// var numbers = [a, b, c, d, e];
+
+
+
+// const product = numbers.reduce((acc, number) => {
+//     return acc * number;
+
+// // })
+// const name = "John"
+// const age = 101
+// const pets = ["cat", "dog"]
+// const petObjects = []
+
+// function runForLoop() {
+//     for (let i = 0; i < pets.length; i++) {
+//         let pet = { type: pets[i] }
+//         if (pets[i] === "cat") {
+//             let name = "fluffy"
+//         } else {
+//             let name = "spot"
+//         }
+//         pet.name = name
+//         petObjects.push(pet)
+//     }
+//     return name
+// }
+
+// runForLoop()
+
+// const carrots = ["bright orange", "ripe", "rotten"]
+
+// function mapVegetables(arr) {
+//     return arr.map((carrot) => {
+//         console.log(`fired`)
+//         return { type: "carrot", name: carrot }
+//     })
+//     }
+
+// mapVegetables(carrots)
+
+// const people = [
+//     {
+//         name: "Princess Peach",
+//         friendly: false
+//     },
+//     {
+//         name: "Luigi",
+//         friendly: true
+//     },
+//     {
+//         name: "Mario",
+//         friendly: true
+//     },
+//     {
+//         name: "Bowser",
+//         friendly: false
+//     }
+// ]
+
+// function filterForFriendly(arr) {
+//     return arr.filter(person => {
+//         return person.friendly
+//     })
+// }
+
+// doMathSum = (a, b) => {
+//     return a + b
+// }
+
+// produceProduct = (a, b)=> {
+//     return a * b
+// }
+
+// printString = (firstName = `Jane`, lastName =`Doe`, age = 100) => {
+//     return (`Hi ${firstName} ${lastName}, How does it feel to be ${age}?`)
+// } 
+
+
+// const animals = [
+//     {
+//         type: "dog",
+//         name: "theodore"
+//     },
+//     {
+//         type: "cat",
+//         name: "whiskers"
+//     },
+//     {
+//         type: "pig",
+//         name: "piglette"
+//     },
+//     {
+//         type: "dog",
+//         name: "sparky"
+//     }
+// ];
+
+// filterForDogs = (arr) => {
+//     return arr.filter((animal) => {
+//       animal.type === "dog" ?true : false
+//     })
+// }
+
+// const vacation = ((location, name) => {
+//     console.log(`
+//     Hi ${name},\n
+//     Welcome to ${location}, \n
+//    I hope you enjoy your stay.Please ask the president of${location} if you need anything`)
+// })
+// fiveAndGreaterOnly = (arr) => {
+//     const fiveGreat = arr.filter((number) => {
+//         return number >= 5;
+//     })
+    
+//     // your code here
+// }
+// // // test
+// fiveAndGreaterOnly = (arr) => {
+//     return arr.filter((number) => {
+//         return number >= 5
+//     })
+
+// }
+// // test
+// const newArr = fiveAndGreaterOnly([3, 6, 8, 2])
+// const newNewArray = fiveAndGreaterOnly([3, 5, 8, 3])
+// console.log(newArr, newNewArray)
+
+// evensOnly = (arr) => {
+//     return arr.filter((number) =>{ 
+//          return number %2 == 0
+//      })
+  
+// }
+
+// console.log(evensOnly([3, 6, 8, 2])); 
+
+// fiveCharactersOrFewerOnly = (arr) => {
+//     return arr.filter((str) => {
+//         return str.length <= 5
+
+//     })
+//     // your code here
+// }
+// // test
+// console.log(fiveCharactersOrFewerOnly(["dog", "wolf", "by", "family", "eaten", "camping"])); // ["by", "dog", "wolf", "eaten"]
+
+
+// peopleWhoBelongToTheIlluminati = (arr) => {
+//     return arr.filter((obj) => {
+//         return obj.member === false
+//     })
+//     // your code here
+// }
+// // test
+// console.log(peopleWhoBelongToTheIlluminati([
+//     {
+//         name: "Angelina Jolie",
+//         member: true
+//     },
+//     {
+//         name: "Eric Jones",
+//         member: false
+//     },
+//     {
+//         name: "Paris Hilton",
+//         member: true
+//     },
+//     {
+//         name: "Kayne West",
+//         member: false
+//     },
+//     {
+//         name: "Bob Ziroll",
+//         member: true
+//     }
+// ]));
+
+// ofAge = (arr) => {
+//     return arr.filter((obj) => {
+//         return obj.age > 18
+//     })
+//     // your code here
+// }
+// // test
+// console.log(ofAge([
+//     {
+//         name: "Angelina Jolie",
+//         age: 80
+//     },
+//     {
+//         name: "Eric Jones",
+//         age: 2
+//     },
+//     {
+//         name: "Paris Hilton",
+//         age: 5
+//     },
+//     {
+//         name: "Kayne West",
+//         age: 16
+//     },
+//     {
+//         name: "Bob Ziroll",
+//         age: 100
+//     }
+// ]));
+
+const users = [
+    {
+        firstName: "Billy",
+        lastName: "Madison",
+        age: 32
+    },
+
+    {
+        firstName: "Tommy",
+        lastName: "Pickles",
+        age: 32
+    },
+
+    {
+        firstName: "Ray",
+        lastName: "Charles",
+        age: 32
+    },
+
+    {
+        firstName: "Lady",
+        lastName: "Gaga",
+        age: 32
+    },
+
+    {
+        firstName: "Elizabeth",
+        lastName: "Taylor",
+        age: 32
+    },
+
+    {
+        firstName: "Led",
+        lastName: "Zeplin",
+        age: 32
+    },
+    {
+        firstName: "Micael",
+        lastName: "Johnson",
+        age: 32
+    },
+    {
+        firstName: "Keri",
+        lastName: "Strug",
+        age: 32
+    },
+    {
+        firstName: "Chucky",
+        lastName: "Finster",
+        age: 32
+    },
+    {
+        firstName: "Angelica",
+        lastName: "Pickles",
+        age: 32
+    },
+]
+
+alphabetSort = (userArray, sortAscending) => {
+    return userArray.sort((lastname) => {
+        return lastname.lastname 
+    })
 }
-
-combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals);
-
-// ["dog", "cat", "mouse", "jackolope", "platypus"]
-
-var numbers = [a, b, c, d, e];
-
-
-
-const product = numbers.reduce((acc, number) => {
-    return acc * number;
-
-})
