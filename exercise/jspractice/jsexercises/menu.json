@@ -1,0 +1,93 @@
+{
+"appetizers":[
+    {"name":"spinachDip",
+    "ingredients":["spinach","cream Cheese","garlic"],
+    "description":"A delisious and nutritions appatixer"},
+    {
+        "name": "motzerella Sticks",
+        "ingredients": [
+            "Fat",
+            "Motzerella Cheese"
+        ],
+        "description": "Fried Cheese Whats better than that?!"
+    },
+    {
+        "name": "ChickenStrips",
+        "ingredients": [
+            "Ranch",
+            "Fat",
+            "Chicken"
+        ],
+        "description": "ChickFila Always says Eat More chicken so Why not?"
+    }
+],
+
+"cold sandwiches" :[
+    {
+        "name": "Turkey Wrap",
+        "ingredients": [
+            "Turkey",
+            "Lettuce",
+            "Tortilla"
+        ],
+        "description": "Even if its a quicky Wrap that Turkey"
+    }
+,
+{
+    "name": "Turkey Wrap",
+    "ingredients": [
+        "Turkey",
+        "Lettuce",
+        "Tortilla"
+    ],
+    "description": "Even if its a quicky Wrap that Turkey"
+},
+{
+    "name": "Turkey Wrap",
+    "ingredients": [
+        "Turkey",
+        "Lettuce",
+        "Tortilla"
+    ],
+    "description": "Even if its a quicky Wrap that Turkey"
+}],
+
+"hot sandwiches":[
+    {
+        "name": "spinachDip",
+        "ingredients": [
+            "spinach",
+            "cream Cheese",
+            "garlic"
+        ],
+        "description": "A delisious and nutritions appatixer"
+    }
+],
+]
+"desserts":[
+    {
+        "name": "spinachDip",
+        "ingredients": [
+            "spinach",
+            "cream Cheese",
+            "garlic"
+        ],
+        "description": "A delisious and nutritions appatixer"
+    }
+],
+"drinks":[
+    {
+        "name": "spinachDip",
+        "ingredients": [
+            "spinach",
+            "cream Cheese",
+            "garlic"
+        ],
+        "description": "A delisious and nutritions appatixer"
+    }
+],
+
+
+
+
+}
