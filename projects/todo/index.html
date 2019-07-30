@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <container>
+    <header>To Do</header>
+    <form id="todoForm">
+        <input type="text" id="newTitle">
+        <input type="text" id="newDescription">
+        <input type="text" id="newPrice">
+        <!-- img -->
+        <button id="addItem">Add</button>    
+    </form>
+    <ul id="toDoCheckList">
+        <li></li>
+        <!-- list items have check box to mark when completed
+        list items have trash button to delet when finished -->
+    </ul>
+
+    </container>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
