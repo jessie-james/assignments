@@ -36,28 +36,49 @@ function displayList(currentList) {
     })
 }
 
+// addButton.addEventListener("click", function (event) {
+//     event.preventDefault()
+//     addToList();
+// })
+
+ 
+const addTodoForm = document.getElementById("todoForm")
+
+addTodoForm.addEventListener("submit", (event) => {
+    event.preventDefault()
+   addToList()
+})
 
 
-// function addToList() {
-//     addButton.addEventListener("click", e); {
-//         e.preventDefault()
+
+function addToList() {
+    const newTitle = addTodoForm.newTitle.value
+    const newDescription = addTodoForm.newDescription.value
+    const newPrice = addTodoForm.newPrice.value
+    const newTodo = {
+        title: newTitle,
+        description: newDescription,
+        price: newPrice
+    }
+    axios.post("https://api.vschool.io/nateje/todo/", newTodo).then(response => {
+        displayList(response.data)
+    })
+}
+
+
 //         axios.post('https://api.vschool.io/jessie_mae/todo/', newListInput).then(function (response) {
 //             displayList(response.data);
 //         })  
 //     }
-// }
+
 // let newListInput = document.getElementById("todoForm")
-// const addbutton = document.getElementById("add")
+// const addButton = document.getElementById("addItem")
 
 
 
 // // //Axios Functions//
 
-// // //GET
-// // axios.get('https://api.vschool.io/jessie_mae/todo').then((response) =>{
-// //     const toDoList = response.data;
-// //    return toDoList
-// // });
+
 // // //POST
 // // axios.post('https://api.vschool.io/jessie_mae/todo/', newItemInput).then(function (response) {
 // //     console.log(response.data);

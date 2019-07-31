@@ -1,0 +1,47 @@
+.title {
+    text-align: center;
+    background:gray;
+    color:white;
+}
+
+.main {
+    border: 1px solid black;
+    width: 60%;
+    margin: auto;
+    background:darkslategray;
+    border-radius: 2%;
+    padding: 10px;
+}
+
+#add-todo {
+    border: 1px solid black;
+    border-radius: 2%;
+    text-align: center;
+    
+    
+}
+
+.input {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+   
+    
+}
+
+.label {
+    color:whitesmoke;
+    margin: 10px;
+    
+    
+}
+.listDiv{
+    background: goldenrod;
+    margin:10px;
+
+}
