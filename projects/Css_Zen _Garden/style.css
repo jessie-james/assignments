@@ -59,7 +59,6 @@ body {
 .cssZen{
     display: grid;
     height: 100%;
-    grid-gap: 3px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
@@ -77,10 +76,8 @@ body {
     background:
     url("http://www.csszengarden.com/214/gridlines-opaque.png"),
     url("http://www.csszengarden.com/214/huntington.jpg");
-    background-position: cover;
+    background-position: center;
     display: grid;
-    height: 100%;
-    grid-gap: 3px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto 70px;
     grid-template-areas: 
@@ -120,25 +117,34 @@ img{
 }
 .sideHeader{
     grid-area: sh;
-    background-image:url("http://www.csszengarden.com/214/noise.png");
+    /* background-image:url("http://www.csszengarden.com/214/noise.png"); */
     background-color: #32505073;
    
 
+}
+.buttons {
+  display: flex;
+  justify-items: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  width:100%
 }
 .button{
   background-color: rgba(255, 255, 255, 0.226);
   color:rgba(255, 255, 255, 0.555);
   font-family: 'Julius Sans One';
   border: none;
-  font-size: 17px;
   height: 100%;
+  font-size: 17px;
   width:80%;
   padding: 0;
 
 }
 
 .arrowButton{
-  width:19%;
+  width:20%;
   
 
 }
@@ -171,9 +177,7 @@ img{
   line-height: 2;
    font-family: 'Julius Sans One';
    font-style: normal;
-   font-weight: 400;
-   font-size:15px;
-   color:#13434744;
+  
   
 }
 .design{
@@ -220,9 +224,9 @@ img{
   margin:10px 0px 0px 0px;
 
 }
-#enlight{
+/* #enlight{
   margin:0;
-}
+} */
 .sideB{
     grid-area: sb;
     padding:10px;
@@ -244,9 +248,9 @@ background: url("http://www.csszengarden.com/214/bamboo.png");
 background-color:#a0b9ad;
  font-family: 'Julius Sans One';
  font-style: normal;
- font-weight: 400;
- font-size:15px;
- color:#13434760;
+  font-weight: 400;
+  font-size:15px;
+  color:#1343477e;
  
 }
 .bodyA{
@@ -306,7 +310,7 @@ background-color:#a0b9ad;
     font-style: normal;
     font-weight: 400;
     color:rgba(255, 255, 255, 0.657);
-    font-size: 20px;
+   
 
 }
 .footerB{
@@ -343,9 +347,7 @@ background-color:#a0b9ad;
 .cssZen {
   display: grid;
   height: 100%;
-  grid-gap: 3px;
   grid-template-columns: repeat(9, 1fr);
-
   grid-template-rows: 250px auto auto auto 250px 150px;
   grid-template-areas:
     "mh mh mh mh mh mh mh mh mh "
@@ -358,18 +360,91 @@ background-color:#a0b9ad;
 .mainheader {
   grid-area: mh;
   background:
-    url("http://www.csszengarden.com/214/contours-opaque.png") 600px 10px,
+    /* url("http://www.csszengarden.com/214/contours-opaque.png") 600px 10px, */
     url("http://www.csszengarden.com/214/gridlines-opaque.png") 600px 10px,
     url("http://www.csszengarden.com/214/huntington.jpg") 100% 100% no-repeat;
   background-position: center;
   display: grid;
-  height: 100%;
-  grid-gap: 3px;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 100%;
   grid-template-areas: "hd hd hd hd hd hd sh sh sh ";
 
 }
+.header{
+  margin: 30px;
+ 
+}
+.para >header {
+  font-size:30px
+}
+.para{
+  font-size:17px;
+}
+.greenSide {
+  font-size: 25px;
+  padding: 40px;
+}
+.zen{
+  font-size:50px;
+}
+.subZen{
+  font-size: 30px;
+}
+img{
+  height: 150px;
+  width: 150px;
+  padding:10px
+}
+.buttons{
+  height: 80%;
+  width:90%;
+  margin:20px
+}
+
+.button {
+
+  height: 50%;
+  width: 80%;
+  padding: 0;
+
+}
+.grouped {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  
+}
+.layoutCredit{
+  border-bottom:1px solid #61685754;
+  padding:30px;
+}
+.arrowButton {
+  
+  width: 20%;
+
+
+}
+
+.design {
+  font-size:25px;
+}
+.designer {
+  font-size: 15px;
+}
+.footText {
+  
+  font-size: 40px;
+}
+ .loneResource{
+   border-bottom:1px solid #61685754;
+   margin:10px;
+
+ }
+ .resource{
+   border-bottom:1px solid #61685754;
+   margin:10px;
+
+ }
     
 /* 
 .cssZen {

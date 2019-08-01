@@ -26,6 +26,9 @@ function display(...listItems) {
         li.textContent = todoItem.title;
         price.textContent = todoItem.price
         img.src = todoItem.imgUrl
+        if (todoItem.imgUrl === '') {
+            img.src ="https://www.digitalcitizen.life/sites/default/files/styles/img_u_large/public/featured/2016-08/photo_gallery.jpg"
+        }
         checkbox.setAttribute("type", "checkbox")
         deleteButton.setAttribute("id", "delete")
         deleteButton.textContent = ("delete")
@@ -42,8 +45,7 @@ function display(...listItems) {
             }
             axios.put(`https://api.vschool.io/jessie_mae/todo/${todoItem._id}`, updateCheck)
                 .then(response => {
-                    console.log(response.data)
-                    display(response.data)
+    
                 })
         })       
         deleteButton.addEventListener("click", (e) => {
