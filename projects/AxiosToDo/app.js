@@ -27,32 +27,40 @@ function display(...listItems) {
         price.textContent = todoItem.price
         img.src = todoItem.imgUrl
         if (todoItem.imgUrl === '') {
-            img.src ="https://www.digitalcitizen.life/sites/default/files/styles/img_u_large/public/featured/2016-08/photo_gallery.jpg"
+            img.src = "https://www.digitalcitizen.life/sites/default/files/styles/img_u_large/public/featured/2016-08/photo_gallery.jpg"
         }
         checkbox.setAttribute("type", "checkbox")
         deleteButton.setAttribute("id", "delete")
         deleteButton.textContent = ("delete")
         if (todoItem.completed) {
-            
             li.style.textDecoration = "line-through"
         }
-        
         // element functions
+        function somefuntion() {
+            axios.get(`https://api.vschool.io/jessie_mae/todo/${todoItem._id}`).then(response => {
+                
+            })
+        }
+        somefuntion()
         checkbox.addEventListener("click", (event) => { 
-          
             const updateCheck = {
                 completed: !todoItem.completed
             }
             axios.put(`https://api.vschool.io/jessie_mae/todo/${todoItem._id}`, updateCheck)
                 .then(response => {
-    
+                    somefuntion()
                 })
-        })       
+        
+        })  
+        
         deleteButton.addEventListener("click", (e) => {
             event.preventDefault()
             axios.delete(`https://api.vschool.io/jessie_mae/todo/${todoItem._id}`)
+                .then(response => {
                     
-                    })
+                })
+            currentList.removeChild(div)
+        })
 
         //element display.
         div.appendChild(deleteButton)
@@ -66,6 +74,7 @@ function display(...listItems) {
 
 }
 getToDos()
+
 
 //POST//
 
