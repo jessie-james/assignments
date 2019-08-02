@@ -65,6 +65,7 @@ body {
 .cssZen{
     display: grid;
     height: 100%;
+    width:100%;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
@@ -323,7 +324,7 @@ background-color:#a0b9ad;
 
 }
 .footText{
-  padding:20px;
+  padding:40px;
   font-family: 'Libre Baskerville';
   font-style: italic;
   font-weight: 400;
@@ -343,11 +344,14 @@ background-color:#a0b9ad;
     grid-area: fb;
     background-color: #325050;
     display:flex;
-    justify-content:space-around;
+    justify-content:center;
     padding:20px;
     font-family: icons;
     color: rgba(255, 255, 255, 0.301);
     font-size:75px;
+}
+.footlogo{
+  margin:10px 10px;
 }
 
 
@@ -374,7 +378,7 @@ background-color:#a0b9ad;
 
 }
 
-@media (min-width: 1150px) {  
+@media (min-width: 1000px) {  
 .cssZen {
   display: grid;
   height: 100%;
@@ -395,7 +399,6 @@ background-color:#a0b9ad;
     url("http://www.csszengarden.com/214/gridlines-opaque.png") 600px 10px,
     url("http://www.csszengarden.com/214/huntington.jpg") 100% 100% no-repeat;
   background-position: center;
-  
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 100%;
@@ -426,10 +429,10 @@ background-color:#a0b9ad;
   padding:20px 10px 20px 10px;
 }
 .zen{
-  font-size:50px;
+  font-size:40px;
 }
 .subZen{
-  font-size: 30px;
+  font-size: 25px;
   margin:0px;
 }
 img{
@@ -497,6 +500,9 @@ img{
        justify-items: center;
        align-items: center;
 
+ }
+ .footlogo {
+   margin: 10px 40px;
  }
     
 /* 
