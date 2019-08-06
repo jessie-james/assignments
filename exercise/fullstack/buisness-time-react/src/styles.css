@@ -1,0 +1,136 @@
+* {
+ margin: 0;
+ box-sizing: border-box;
+
+}
+
+
+.app-container{
+     display: grid;
+     height: 100%;
+     width:100%;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: auto;
+     grid-template-areas:
+    "n n n n n n"
+    "b b b b b b"
+    "f f f f f f";
+     color: white;
+
+}
+.nav-container{
+    grid-area: n;
+    height:95vh;
+    background:
+    url("http://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/public/field/field_image_main/OxBanner_0.jpg?itok=sU6EZ7Ot")no-repeat center center fixed;
+    background-size: cover;
+    opacity:.7;
+
+    
+
+}
+header {
+    display:flex;
+    height: 30%;
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    text-align: center;
+}
+p{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    color:blue;
+
+}
+
+.nav-bar{
+    display:flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 5px;
+}
+
+
+ ul{
+display:flex;
+
+ font-size: 2em;
+ list-style: none;
+ justify-content: space-between;
+ padding:0;
+}
+
+li:hover{
+    border: white solid 2px;
+    border-radius: 5px;
+}
+
+
+li{
+    display: flex;
+    justify-content: space-evenly;
+    margin:10px;
+    padding:5px;
+}
+
+
+.body-container{
+    grid-area:b;
+    background: gray;
+    height: 800px;
+}
+.learing-Style{
+    background:white;
+    color:black;
+    margin:20px 0px;
+}
+.courses{
+width: 20%;
+height:200px;
+padding:0;
+margin:0;
+ background-size: cover;
+ text-align: center;
+ background-repeat: no-repeat;
+ text-justify: center;
+
+}
+.science{
+    background-image:url('https://www.paradigmamerica.com/wp-content/uploads/2019/01/vrkid.jpg');
+     
+
+     
+}
+.history{
+    background-image: url('https://www.saveur.com/sites/saveur.com/files/styles/opengraph_1_91x1/public/images/2016/11/vr-timelooper_2000x1500.jpg?itok=3fA2HB8o');
+   
+}
+.english {
+    background-image: url('https://o.aolcdn.com/images/dims?quality=85&image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F2ae7e151a6bbed922ec2c87e5b65a95b%2F204431608%2Ftitle.jpg&client=amp-blogside-v2&signature=562965c4eaa7b17e4017b2427b1a7ca3c3a6c45e');
+   
+}
+
+.finance{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK3pLhN8QhlKN5-UcKphZAUxz2NlxG1kXvC7uONIHt-nh9CtK5');
+   
+  
+}
+
+.math {
+    background-image: url('https://longnesfa.files.wordpress.com/2017/08/pic2-2.png');
+  
+}
+.footer-container{
+ grid-area: f;
+ height:95vh;
+   background:
+   url("https://i.pinimg.com/originals/53/d9/54/53d954b2aa68ec165783d66455574815.gif")no-repeat center fixed;
+   background-size: cover;
+}
+
+

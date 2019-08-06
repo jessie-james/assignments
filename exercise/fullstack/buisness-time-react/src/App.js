@@ -1,15 +1,15 @@
 import React from 'react'
-import Nav from './Nav.js'
-import Body from './Body.js'
-import Footer from './Footer.js'
+import Nav from './Nav'
+import Body from './Body'
+import Footer from './Footer'
 import './styles.css'
 
 
 const App = () => {
     return (
         <div className="app-container">
-            <Nav />
-            <Body />
+            <Nav/>
+            <Body/>
             <Footer/>
         </div>
     )
