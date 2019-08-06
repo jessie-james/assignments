@@ -30,6 +30,7 @@
 
 }
 header {
+    align-items: center;
     display:flex;
     height: 30%;
     font-size: 90px;
@@ -98,7 +99,7 @@ margin:0;
  text-align: center;
  background-repeat: no-repeat;
  text-justify: center;
-
+align-items: center;
 }
 .science{
     background-image:url('https://www.paradigmamerica.com/wp-content/uploads/2019/01/vrkid.jpg');
