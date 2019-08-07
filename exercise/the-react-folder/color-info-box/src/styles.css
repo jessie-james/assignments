@@ -1,0 +1,18 @@
+
+*{
+    margin: 0;
+}
+.main-container{
+    background: black;
+    color:white;
+   
+}
+.info-box{
+    background:black;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

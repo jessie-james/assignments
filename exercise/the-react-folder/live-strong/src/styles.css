@@ -1,0 +1,64 @@
+*{
+    margin:0;
+}
+.app-container{
+     display: grid;
+     height: 100%;
+     background-color:#818282;
+     width:100%;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows:auto;
+     grid-template-areas: 
+     "n n n n n n"
+     "h h h h h h"
+     "i i i i i i"
+     "f f f f f f";
+     color: white;
+
+}
+.nav-container{
+    grid-area:n;
+    display:flex;
+    background-color:#818282;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    position:fixed;
+
+}
+.logo{
+    background: url('http://www.livestronghouse.com/wp-content/uploads/2017/10/LSH-telos-blue.png');
+    background-size:cover;
+    background-position: center;
+    height:100px;
+    width:250px;
+    margin:10px;
+
+
+   
+}
+.nav-bar{
+    display: flex;
+    margin:20px;
+}
+.nav-bar > ul{
+    list-style-type: none;
+    margin:0;
+}
+.nav-bar > ul > li {
+    display:none;
+    
+}
+.home-container {
+    grid-area:h;
+    height:95vh;
+    background: url("https://images.pexels.com/photos/2695232/pexels-photo-2695232.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")no-repeat center fixed;
+    background-size: cover;
+}
+.home-page-info{
+    grid-area: i;
+   height: 83vh;
+   display:flex;
+
+}
