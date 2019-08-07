@@ -1,12 +1,20 @@
 import React from 'react'
 import Spot from './Spot.js'
-import './Spots.json'
+import specificSpots from'./Spots.json'
 
-cosnt SpotsContainer = () => {
-    const mappedSpots = Spots.map((box) => <Spot />) {
+const SpotsContainer = () => {
+    const mappedSpots = specificSpots.map((theSpot) => 
+        <Spot backgroundColor={theSpot.backgroundColor}
+            border= {theSpot.border}
+            place={theSpot.place}
+            price={theSpot.price}
+            timeToGo={theSpot.timeToGo} />
+            
+    )
     return (
         <div className="spots-container">
                 {mappedSpots}
         </div>
     )
 }
+export default SpotsContainer 

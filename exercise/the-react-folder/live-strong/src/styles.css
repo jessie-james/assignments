@@ -66,6 +66,9 @@ li:hover > ul.drop-menu li{
     background: url("http://www.livestronghouse.com/wp-content/uploads/2017/03/nature-sky-sunset-manwebHOme-Black-01.jpg")no-repeat center fixed;
     background-size: cover;
 }
+.icon{
+   
+}
 .home-page-info{
    grid-area: i;
    height: 85vh;
@@ -92,14 +95,29 @@ h1{
     border: solid white;
     border-radius: 5%;
     padding:10px;
-}
+     
+    align-items: center;
+    }
 
 header{
+   
     font-size: 40px;
     margin:10px;
-    text-align: center;
+
 }
 
 p{
     font-size:20px;
 }
+.icon{
+    display:flex;
+    height: 100px;
+    width: 100px;
+    justify-items: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+   
+
+}
+

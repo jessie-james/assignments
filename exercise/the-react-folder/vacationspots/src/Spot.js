@@ -1,24 +1,21 @@
 import React from 'react'
-import Spots from './spots.json'
 
-const mappedSpots = Spots.map((box) => <Spot />) {
-function Spot(props){
-        let { backgroundColor, title, subtitle, information } = props
+
+
+function Spot(props) {
+        let {  backgroundColor, border, place, price, timeToGo } = props
         const styles = {
             backgroundColor,
+            border: `5px solid ${border}`, 
+        
+            color: "blue",
         }
         return (
-            <div className="info-box" style={styles}>
-                <h1>{title}</h1>
-                <h3>{subtitle}</h3>
-                <p>{information}</p>
+            <div className="vaction-card" style={styles}>
+                <h1>{place}</h1>
+                <h3>{price}</h3>
+                <h3>{timeToGo}</h3>
             </div>
         )
     }
-    return (
-        <div>
-            {mappedSpots}
-        </div>
-    )
-}
 export default Spot

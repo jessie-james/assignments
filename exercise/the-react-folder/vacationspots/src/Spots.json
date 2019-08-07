@@ -1,32 +1,36 @@
 [
     {
-    place: "Meridian, Idaho",
-    price: 40,
-    timeToGo: "Spring"
+    "place": "Meridian, Idaho",
+    "price": "40",
+    "timeToGo": "Spring",
+    "backgroundColor": "black",
+    "border":"green"
     },
     {
-    place: "Cancun",
-    price: 900,
-    timeToGo: "Winter"
+    "place": "Cancun",
+    "price": "900",
+    "timeToGo": "Winter",
+    "backgroundColor": "green"
     },
     {
-    place: "China",
-    price: 1200,
-    timeToGo: "Fall"
+    "place": "China",
+    "price": "1200",
+    "timeToGo": "Fall",
+    "backgroundColor": "black"
     },
     {
-    place: "Russia",
-    price: 1100,
-    timeToGo: "Summer"
+    "place": "Russia",
+    "price": "1100",
+    "timeToGo": "Summer"
     },
     {
-    place: "Lebanon",
-    price: 400,
-    timeToGo: "Spring"
-    }
+    "place": "Lebanon",
+    "price": "400",
+    "timeToGo": "Spring"
+    },
     {
-    place:"Delta Quadrant"
-    price: 20000000,
-    timeToGo:"the Year 2090"
+    "place":"Delta Quadrant",
+    "price": "20000000",
+    "timeToGo":"the Year 2090"
     }
 ]
