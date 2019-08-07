@@ -1,7 +1,8 @@
 import React from 'react'
 const WhyUs = () => {
     return (
-        <div className="home-page-info">
+        <div className="home-page-info"><h1>Why Us?</h1>
+            <div className="why-us-container">
             <div className="size-matter info">
                 <header>Size Matters</header>
                 <div className="icon"></div>
@@ -33,7 +34,7 @@ const WhyUs = () => {
                     <li>Difficulty in social settings</li>
                     <li>Heavily influenced by negative peer groups</li>
                 </ul></p>
-                    
+             </div>       
             </div>
          </div>
      )
