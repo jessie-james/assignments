@@ -7,7 +7,6 @@ function Spot(props) {
         const styles = {
             backgroundColor,
             border: `5px solid ${border}`, 
-        
             color: "blue",
         }
         return (

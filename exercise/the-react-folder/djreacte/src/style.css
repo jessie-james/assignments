@@ -1,0 +1,16 @@
+*{
+    margin: 0
+}
+ .dj-container{
+     display:grid;
+     grid-template-columns: 1fr 1fr;
+     height: 1000px;
+     justify-content: space-evenly;
+ }
+ button{
+     margin:10px;
+     border:2px black solid;
+     border-radius:5%;
+     height: 40px;
+     width: 100px;
+ }

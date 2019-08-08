@@ -26,7 +26,8 @@
     {
     "place": "Lebanon",
     "price": "400",
-    "timeToGo": "Spring"
+    "timeToGo": "Spring",
+    "backgroundColor": "yellow"
     },
     {
     "place":"Delta Quadrant",
