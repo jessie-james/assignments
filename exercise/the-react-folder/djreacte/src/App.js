@@ -35,10 +35,6 @@ class App extends React.Component {
             return {box :prevState.box }
         })
     }
-  
-
-
-
     blueL = () => {
         this.setState(prevState => {
            return prevState.box[2] = 'blue'
