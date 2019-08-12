@@ -1,0 +1,55 @@
+
+*{
+    margin:0;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    margin:10px;
+    align-items: center;
+}
+.badge-form{
+    background-color: blue;
+    color:black;
+    border: solid black 2px;
+    border-radius: 5px;
+    height: 400px;
+    width:800px;
+    
+
+}
+.new-badge{
+    background-color: blue;
+    color:black;
+    border: solid black 2px;
+    border-radius: 5px;
+    height: 400px;
+    width:800px;
+}
+h1{
+    background: grey;
+    border:solid black 2px;
+    color:black;
+    margin:10px;
+    border-radius: 5px;
+
+}
+.badge-Output{
+     height: 30px;
+     width:200px;
+     text-align: start;
+     margin:10px;
+     border:solid black 2px;
+
+}
+input {
+    margin:10px;
+    /* display:flex; */
+    height: 30px;
+    width:200px;
+    text-align: start;
+}
+.paragraphInput{
+    height:100px;
+    width:300px;
+}
