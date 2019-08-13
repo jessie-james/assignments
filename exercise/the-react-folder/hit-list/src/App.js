@@ -16,7 +16,7 @@ class App extends Component {
     }
 
     render() {
-        
+       
         const mappedPeeps = this.state.hitlist.map((peeps, i) => {
             return (
                 <Person key={i} name={peeps.name} image={peeps.image} />

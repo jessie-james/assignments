@@ -8,7 +8,9 @@ const Person = (props) => {
         flexDirection: 'column',
     }
     const imgStyle = {
-        borderRadius:'50%',
+        borderRadius: '50%',
+        margin: '10px',
+        backgroundColor:'black'
     }
 
     return (
