@@ -32,12 +32,12 @@ import Badge from './Badge.js'
              favFood,
              phone
          };
-         this.setState(prevState => { return { badges: [...prevState.badges, newBadge] } });
+         this.setState(prevState => { return { badges: [newBadge, ...prevState.badges] } });
          
      }
      
      render() {
-         const mappedBadges = this.state.badges.map(badge => <Badge firstName={badge.firstName} lastName ={badge.lastName} />)
+         const mappedBadges = this.state.badges.map(badge => <Badge firstName={badge.firstName} lastName={badge.lastName} email={badge.email}/>)
          return(
              <div className="badges">
                  <div className="badge-form">
