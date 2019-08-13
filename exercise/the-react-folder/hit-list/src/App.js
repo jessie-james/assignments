@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import axios from 'axios'
+import Person from './Person.js'
+class App extends Component { 
+    constructor() {
+        super() 
+        this.state = {
+            hitlist:[]
+        }
+    }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    componentDidMount() {
+        axios.get('https://s3.amazonaws.com/v-school/data/hitlist.json').then(response => {
+            this.setState({ hitlist: response.data });
+        })
+    }
+
+    render() {
+        
+        const mappedPeeps = this.state.hitlist.map((peeps, i) => {
+            return (
+                <Person key={i} name={peeps.name} image={peeps.image} />
+            )
+        })
+
+        return (
+
+            <div>
+                { mappedPeeps }
+            </div>
+        )  
+    }
 }
-
-export default App;
+export default App
