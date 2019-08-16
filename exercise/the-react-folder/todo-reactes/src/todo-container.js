@@ -6,7 +6,7 @@ const TodoContainer = () => {
     return (
         <div>
             <h2>its jess</h2>
-            <Todo />
+            <Todo {todo.name}/>
     </div>
     )
 }

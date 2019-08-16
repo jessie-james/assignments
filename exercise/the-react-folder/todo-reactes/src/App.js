@@ -4,7 +4,6 @@ import TodoContainer from './todo-container'
 const App = () => {
     return (
         <div>
-            <h1>Hellwo Worlds</h1>
             <TodoContainer />
             <Form />
         </div>
