@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0
+}
+.app-container{
+    background-color: lightgray;
+    font-size:20pt;
+    padding:2px;
+}
+.header-container{
+    display:flex;
+    justify-content: space-between;
+    background: #333;
+    font-size:20pt;
+    height:20%;
+    justify-items: center;
+    align-items:center;
+    padding:10px;
+}
+.currancyform{
+    display:flex;
+    justify-content: space-between;
+  
+}
+.currancyform > input {
+    height: 30px;
+    background-color:lightseagreen;
+}
+
+a{
+  margin:10px;
+  border-radius: 3%;
+  text-decoration: none;
+  border-left: solid black 3px;  
+  border-bottom: solid black 3px;  
+  color:white;
+  font-size: 15pt;
+}
+
+.home{
+     display:flex;
+    height:100px;
+    background:grey;
+    align-items: center;
+    /* align-content:center;
+    justify-items:center;
+    justify-content: center; */
+}
+.body{
+    font-size: 30px;
+    height:100px;
+}
+.about{
+    background:green;
+}
+.article{
+    width:33%;
+    border-radius:3px;
+    border:solid black 3px;
+    font-size: 10px;
+}
+.footer{
+    height: 50px;
+    background-color:rgb(57, 54, 54);
+
+}
+
+
