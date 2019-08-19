@@ -6,6 +6,7 @@ import SavedList from './SavedList.js'
 import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
 import './styles.css'
+// import { withGlobal } from './GlobalProvider'
 
 
 const App = () => {

@@ -1,11 +1,13 @@
 import React from 'react'
+import CountrySelect from './CountrySelect.js'
+
 const Home = () => {
     return(
         <div className="home body">
             <form className="currancyform">
-            <input type="number"></input>
-            <input typle="text"></input>
-            <input type="text"></input>
+                <input type="number"></input>
+                <CountrySelect />
+                <CountrySelect />
             </form>
                 
         </div>

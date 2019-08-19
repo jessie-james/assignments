@@ -48,16 +48,19 @@ a{
 }
 .body{
     font-size: 30px;
-    height:100px;
+    height:100%;
 }
 .about{
     background:green;
+     height:100%;
 }
 .article{
     width:33%;
     border-radius:3px;
     border:solid black 3px;
     font-size: 10px;
+    height:100%;
+
 }
 .footer{
     height: 50px;

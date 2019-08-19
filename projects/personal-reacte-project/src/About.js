@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div className="body about">
             <StrongCurrancy />
-            </div>
+        </div>
     )
 }
 export default About
