@@ -6,7 +6,7 @@ import SavedList from './SavedList.js'
 import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
 import './styles.css'
-// import { withGlobal } from './GlobalProvider'
+import { withGlobal } from './GlobalProvider'
 
 
 const App = () => {
@@ -17,8 +17,7 @@ const App = () => {
             <Route path='/about' component={About} />
             <Route path='/list' component={SavedList}/>
         </Switch>
-        <Footer/>
-        
+        <Footer />
     </div>
 }
-export default App
+export default withGlobal(App)
