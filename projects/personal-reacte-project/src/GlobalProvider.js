@@ -8,9 +8,26 @@ class GlobalProvider extends React.Component {
         super()
         this.state = {
             countryCodes: [],
+            rate: "",
+            resultAmount: "",
+            saved:[]
         }
     
     }
+    
+    globalSubmit = (from, to, amount) => {
+        axios.get(`https://data.fixer.io/api/convert?access_key=e99f1218ad91423282c6bb4d9013b35b&from=${from}&to=${to}&amount=${amount}`).then(response => {
+            this.setState({ rate: response.data.info.rate})
+            this.setState({ resultAmount: response.data.result })
+        })
+    }
+    handleSave = () => {
+        this.setState(prevState => ({
+            saved: [...prevState.saved, {option1:this.state.option1, option2:this.state.option2, savedrate: this.state.rate, savedAmount: this.state.resultAmount }]
+        })
+        )
+    }
+
     getCodes = () => {
         axios.get('https://data.fixer.io/api/latest?access_key=e99f1218ad91423282c6bb4d9013b35b').then(response => {
             this.setState({
@@ -19,14 +36,14 @@ class GlobalProvider extends React.Component {
             )
         }) 
     }
-    onSubmit = () => {
-        axios.get('https://data.fixer.io/api/convert?access_key=e99f1218ad91423282c6bb4d9013b35b&from=`${id}`&to =`${ids}&amount=`${nums}')
-    }
+    
     
     render() {
         return(
             <Provider value={{
                 getCodes: this.getCodes,
+                globalSubmit: this.globalSubmit,
+                handleSave: this.handleSave,
                 ...this.state
             }}>
                 {this.props.children}

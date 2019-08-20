@@ -1,9 +1,14 @@
 import React from 'react'
-const SavedList = () => {
+import ListItem from './ListItem'
+import {withGlobal} from './GlobalProvider'
+
+const SavedList = (props) => {
+    const mappedList = props.saved.map((item, i) => <ListItem item={item}/>)
+
     return (
         <div className="saved-rates-container">
-            <h1>this is my SavedList</h1>
-            </div>
+            {mappedList} 
+        </div>
     )
 }
-export default SavedList
+export default withGlobal(SavedList)
