@@ -8,8 +8,8 @@ class GlobalProvider extends React.Component {
         super()
         this.state = {
             countryCodes: [],
-            rate: "",
-            resultAmount: "",
+            rate: "0.00",
+            resultAmount: "0.00",
             saved:[]
         }
     
@@ -21,35 +21,32 @@ class GlobalProvider extends React.Component {
             this.setState({ resultAmount: response.data.result })
         })
     }
-    handleSave = () => {
+    globalSave = () => {
+
         this.setState(prevState => ({
             saved: [...prevState.saved, {option1:this.state.option1, option2:this.state.option2, savedrate: this.state.rate, savedAmount: this.state.resultAmount }]
         }))
-    
     }
 
     getCodes = () => {
         axios.get('https://data.fixer.io/api/latest?access_key=e99f1218ad91423282c6bb4d9013b35b').then(response => {
             this.setState({
                 countryCodes: Object.keys(response.data.rates)
-            }
-            )
+            })
         }) 
     }
-    
     
     render() {
         return(
             <Provider value={{
                 getCodes: this.getCodes,
                 globalSubmit: this.globalSubmit,
-                handleSave: this.handleSave,
+                globalSave: this.globalSave,
                 ...this.state
             }}>
                 {this.props.children}
             </Provider>
-        )
-    }
+        )}
 }
 export default GlobalProvider
 

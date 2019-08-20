@@ -1,57 +1,60 @@
 *{
     margin:0;
-    padding:0
+    padding:0;
 }
 .app-container{
+    height:100vh;
     background-color: lightgray;
     font-size:20pt;
-    padding:2px;
-    height:900px;
 }
 
 .header-container{
     display:flex;
     justify-content: space-between;
     background: #333;
-    font-size:20pt;
     height:10%;
     justify-items: center;
     align-items:center;
-    padding:10px;
-    color:rgba(245, 245, 245, 0.612);
+    color: rgb(159, 167, 237);
+    text-shadow: 3px 3px 9px;
 }
 
 .currancyform > input {
    height: 100px;
    width: 200px;
-   background-color:lightseagreen;
+   background-color:rgb(179, 177, 177);
    border-radius: 4%;
-   border: rgb(5, 133, 127) solid 3px;
+   border: rgb(148, 147, 147) solid 2px;
    text-align: center;
    font-size: 24pt;
+   color: rgb(74, 73, 73);
 }
 ::placeholder{
-    color:black;
+    color: rgb(74, 73, 73);
 }
 
 a{
-  margin:10px;
-  border-radius: 3%;
-  text-decoration: none;
-  border-left: solid black 3px;  
-  border-bottom: solid black 3px;  
-  color:white;
-  font-size: 15pt;
+    margin:10px;
+    text-decoration: none;
+    color:rgb(76, 92, 238);
+    font-size: 15pt;
+    text-shadow: none;
 }
 
 .home{
     display:flex;
     flex-direction: column;
-    height:90%;
+    height:80vh;
     width:100%;
-    background:grey;
+    background:rgb(174, 166, 166);
     justify-content: space-around; 
     align-items: center ;
+}
+.returned-results{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color:rgb(76, 92, 238);
 }
 .currancyform{
     display:flex;
@@ -63,88 +66,101 @@ a{
 select{
    height: 100px;
    width: 200px;
-   background-color:lightseagreen;
+   border: rgb(148, 147, 147) solid 2px;
+   background-color:rgb(179, 177, 177);
    border-radius: 4%;
-   border: rgb(5, 133, 127) solid 3px;
    text-align: center;
    font-size: 24pt;
+   color: rgb(74, 73, 73);
 }
 .submit{
-    border:black 3px solid;
-    border-radius: 6%;
+    color:rgb(76, 92, 238);
     font-size:24pt;
-    background-color: rgb(193, 189, 189);
-    width:200px;
+    border: rgb(159, 167, 237)solid 2px;
+    background-color: rgb(159, 167, 237);
+    width:400px;
     height:80px;
+    border-radius:2%;
+    box-shadow: 10px 10px 10px rgba(76, 92, 238, 0.612);
 
 }
-/* .exchanged-info{
-  
-} */
+
 .save{
-display:flex;
-align-self: flex-end;
- border:black 3px solid;
- border-radius: 6%;
- font-size:24pt;
- background-color: rgb(193, 189, 189);
-margin:0px 90px 0px 0px;
-width:150px;
-text-align:center;
-justify-content: center;
+    display:flex;
+    align-self: flex-end;
+    color:rgb(76, 92, 238);
+    font-size:20pt;
+    border: rgb(159, 167, 237)solid 2px;
+    background-color: rgb(159, 167, 237);
+    margin:0px 90px 0px 0px;
+    width:150px;
+    text-align:center;
+    justify-content: center;
+    border-radius:2%;
+    box-shadow: 10px 10px 10px rgba(76, 92, 238, 0.612);
 }
+
 .list-container{
     display:flex;
     justify-content: space-evenly;
     text-align: center;
+    margin:10px;
 }
 .saved-country{
-    border:black solid 3px;
+    border: rgb(148, 147, 147) solid 2px;
     padding:4px;
 }
-     
 
 .about{
-   background:grey;
-   height:90%;
+   background:rgb(174, 166, 166);
+   height:80vh;
    display:flex;
    align-items: center;
-  
+
 }
 .article > h2 {
     text-align: center;
     margin:10px;
-
+    color:rgba(76, 92, 238, 0.728);
 }
 .article > p {
     margin:20px 0px;
+    color:rgb(79, 79, 79);
+    padding:0px 30px;
 }
 .article{
+    margin:20px;
     align-content: center;
     width:33%;
     border-radius:3px;
-    border:solid black 3px;
+    border:rgb(76, 92, 238)solid 2px;
     font-size: 15pt;
-    height:80%;
-    padding:10px;
+    height:80%;  
 }
 .saved-rates-container{
-    height:90%;
+    height:80vh;
+    background:rgb(174, 166, 166);
 }
 
 .footer{
     height:15%;
     background-color:rgb(57, 54, 54);
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .scale-label{
     margin:0px 30px;
     display:flex;
     justify-content: center;
     align-items: center;
-
-
+}
+.delete-button >button {
+     border: rgb(181, 180, 180) solid 2px;
+     border-radius: 100%;
+     font-size:16pt;
+     padding:3px;
+     background-color:rgb(203, 200, 200);
+     color:rgb(152, 148, 148);
 }
 .scale {
     border:black solid 3px;
@@ -152,6 +168,7 @@ justify-content: center;
      height:50%;
      margin:0px 10px;
 }
+
 .box{
     height: 100%;
     width: 30px;

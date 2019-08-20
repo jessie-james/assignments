@@ -4,7 +4,7 @@ const ListItem = (props) => {
     return (
         <div className="list-container">
             <div className="saved-country">country 1</div>
-            <h1>Exchange Rate ={props.item.savedrate}</h1>
+            <h3>Exchange Rate ={props.item.savedrate}</h3>
             <div className="saved-country">country 2</div>
             <div className="delete-button"><button>delete</button></div>
         </div>
