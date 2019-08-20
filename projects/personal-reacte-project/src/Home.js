@@ -38,13 +38,6 @@ class Home extends React.Component {
         const resultAmount = this.props.resultAmount;
         console.log(this.props.saved)
 
-
-        // if (rates < 0.0) {
-        //     console.log('less')
-        // } else if (rates > 1.1) {
-        //     console.log('greater')
-            
-        // }
         
         return (
             <div className="home">

@@ -93,6 +93,15 @@ width:150px;
 text-align:center;
 justify-content: center;
 }
+.list-container{
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.saved-country{
+    border:black solid 3px;
+    padding:4px;
+}
      
 
 .about{

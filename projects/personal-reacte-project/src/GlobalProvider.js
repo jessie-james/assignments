@@ -24,8 +24,8 @@ class GlobalProvider extends React.Component {
     handleSave = () => {
         this.setState(prevState => ({
             saved: [...prevState.saved, {option1:this.state.option1, option2:this.state.option2, savedrate: this.state.rate, savedAmount: this.state.resultAmount }]
-        })
-        )
+        }))
+    
     }
 
     getCodes = () => {
