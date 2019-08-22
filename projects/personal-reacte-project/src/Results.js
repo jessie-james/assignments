@@ -1,4 +1,5 @@
 import React from 'react'
+import StrongDollarScale from './StrongDollarScale'
 import { withGlobal } from './GlobalProvider'
 
 const Results = (props) => {
@@ -14,8 +15,9 @@ const Results = (props) => {
                 <h4>1 {props.option2} = {reverseRate} {props.option1} </h4>
                 <h4>1 {props.option1} = {rates} {props.option2} </h4>
                 <h2>Exchange Results</h2>
+                
+               
             </div>
-           
             <button className="save" onClick={props.globalSave}>Save</button>
         </div>
     )

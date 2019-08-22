@@ -70,11 +70,9 @@ class GlobalProvider extends React.Component {
         }) 
     }
     
-    getList = () => {
-        const savedArr = JSON.parse(localStorage.saved);
-        this.setState(prevState => ({ saved: [...prevState.saved, savedArr] }))
+ 
+
     
-   }
     getCodes = () => {
         axios.get('https://data.fixer.io/api/latest?access_key=e99f1218ad91423282c6bb4d9013b35b').then(response => {
             this.setState({
@@ -85,7 +83,7 @@ class GlobalProvider extends React.Component {
     deleteItem = (myitem) => {
         this.setState(prevState => ({
             saved: prevState.saved.filter(item => item !== (myitem))
-        })) 
+        }), ()=> localStorage.setItem('saved', JSON.stringify(this.state.saved))) 
     }
     
     render() {
