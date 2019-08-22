@@ -6,18 +6,17 @@ class GlobalProvider extends React.Component {
     constructor() {
         super()
         this.state = {
-            number: "1",
-            option1: "USD",
-            option2: "EUR",
+            number: "",
+            option1: "",
+            option2: "",
             countryCodes: [],
             rate: "0.00",
-            reversRate: "0.00",
+            reverseRate: "0.00",
             resultAmount: "0.00",
             fromColor: '',
             toColor: '',
-            saved:[]
+            saved:JSON.parse(localStorage.getItem('saved')) || []
         }
-    
     }
     amountChange = e => {
         let { value } = e.target;
@@ -28,57 +27,47 @@ class GlobalProvider extends React.Component {
         let { value } = e.target;
         this.setState({ option1: value })
     }
+    //leave code value
 
     handleOptions2 = (e) => {
         let { value } = e.target;
         this.setState({ option2: value })
     }
+    //leave code value
 
     globalSubmit = (e, option1, option2, number) => {
         e.preventDefault()
         axios.get(`https://data.fixer.io/api/convert?access_key=e99f1218ad91423282c6bb4d9013b35b&from=${option2}&to=${option1}&amount=${number}`).then(response => {
             this.setState({
-                reversRate: response.data.info.rate
+                reverseRate: response.data.info.rate
             })
         })
         axios.get(`https://data.fixer.io/api/convert?access_key=e99f1218ad91423282c6bb4d9013b35b&from=${option1}&to=${option2}&amount=${number}`).then(response => {
             this.setState({ rate: response.data.info.rate, resultAmount: response.data.result }, () => {
                 if (this.state.rate > 10) {
-                    this.setState({ fromColor: 'darkgreen' , toColor: 'red'})
-                } else if (this.state.rate > 2) {
-                    this.setState({ fromColor: 'lightgreen' , toColor: 'orange'})
-                } else if (this.state.rate > 0.2) {
-                    this.setState({ fromColor: 'yellow' , toColor: 'yellow'})
-                } else if (this.state.rate > 0.05) {
-                    this.setState({fromColor:'orange', toColor: 'lightgreen'})
+                    this.setState({ fromColor: '#21660C' , toColor: 'red'})
+                } else if (this.state.rate > 1) {
+                    this.setState({ fromColor: '#5EA10D' , toColor: '#C76718'})
+                } else if (this.state.rate === 1) {
+                    this.setState({ fromColor: '#E6BA1C' , toColor: '#E6BA1C'})
+                } else if (this.state.rate < 1) {
+                    this.setState({fromColor:'#C76718', toColor: '#5EA10D'})
                 }else if (this.state.rate <= 0.05){
-                    this.setState({ fromColor: 'red' , toColor: 'darkgreen'})
+                    this.setState({ fromColor: 'red' , toColor: '#21660C'})
                 } else {
-                    console.log('fired')
+                    this.setState({ fromColor: 'rgb(74, 73, 73)' , toColor: 'rgb(74, 73, 73)'})
                 }
             })
         })
     }
 
-    // mysaved = (e) => {
-    //     e.preventDefault()
-    //     localStorage.setItem('saved', JSON.stringify({ savedCode1: this.state.option1, savedCode2: this.state.option2, savedrate: this.state.rate, savedAmount: this.state.resultAmount }))
-    //     const savedArr = JSON.parse(localStorage.saved);
-    //     this.setState(prevState => ({ saved: [...prevState.saved, savedArr] }))
-    //     console.log("fired")
-    // }
-
 
     globalSave = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
+        //tell user that it has been saved
         this.setState(prevState => ({
-            saved: [...prevState.saved, { savedCode1: prevState.option1, savedCode2: prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount, fromColor:prevState.fromColor, toColor:prevState.toColor }]
-        })
-            // return {
-            //     saved: [...prevState.saved, {savedCode1:prevState.option1, savedCode2:prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount }]
-            // }
-        )
-        
+            saved: [...prevState.saved, { savedCode1: prevState.option1, savedCode2: prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount, fromColor:prevState.fromColor, toColor:prevState.toColor }]}), ()=> {localStorage.setItem('saved', JSON.stringify(this.state.saved))
+        }) 
     }
     
     getList = () => {

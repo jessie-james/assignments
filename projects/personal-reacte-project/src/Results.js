@@ -3,22 +3,22 @@ import { withGlobal } from './GlobalProvider'
 
 const Results = (props) => {
     const rates = props.rate;
-    const reversRate = props.reversRate;
+    const reverseRate = props.reverseRate;
     const resultAmount = props.resultAmount;
 
     return (
         <div className="results">
             <div className="returned-results">
-                <h1>{rates} = {props.option2}</h1>
-                <h5>{reversRate} = {props.option1}</h5>
-                <h2>Exchange Rate</h2>
+                <h5>{props.number} {props.option1} = </h5>
+                <h1>{resultAmount} {props.option2}</h1>
+                <h4>1 {props.option2} = {reverseRate} {props.option1} </h4>
+                <h4>1 {props.option1} = {rates} {props.option2} </h4>
+                <h2>Exchange Results</h2>
             </div>
-            <div className="returned-results">
-                <h2>{resultAmount}</h2>
-                <h2>Exchanged Amount</h2>
-            </div>
+           
             <button className="save" onClick={props.globalSave}>Save</button>
         </div>
     )
 }
 export default withGlobal(Results)
+

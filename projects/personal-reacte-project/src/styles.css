@@ -69,9 +69,12 @@ a:hover{
     display:flex;
     flex-direction: column;
     align-items: center;
-    width:100%
+    width:100%;
+    justify-content: space-evenly;
+    text-align: center;
 
 }
+
 .currancyform > input {
    height: 50px;
    width: 70%;
@@ -89,6 +92,7 @@ a:hover{
     height: 50px;
     width: 28%;
     margin:10px;
+    font-family: "spartan-SemiBold";
     color: rgb(74, 73, 73);
     text-align: center;
     font-size: 24pt;
@@ -101,12 +105,7 @@ a:hover{
     width:100%;
     margin:10px 0px; 
 }
-.currancyform{
-    display:flex;
-    justify-content: space-evenly;
-    width: 100%;
-    text-align: center;
-}
+
 .submit{
     background-color:rgb(224, 223, 119);
     color:rgba(0, 50, 189, 0.76);
@@ -166,8 +165,9 @@ a:hover{
     height:80%;  
 }
 
+
 .saved-rates-container {
-    height:75vh;
+    height:78vh;
 }
 
 .list-container {
@@ -176,6 +176,7 @@ a:hover{
     text-align: center;
     margin: 10px;
     font-size:10pt;
+    
     align-items: center;
     
 }
@@ -190,6 +191,7 @@ a:hover{
     height:50%;
     border-radius: 15px;
     font-size:15pt;
+    font-family: "spartan-SemiBold";
     text-align: center;
 }
 
@@ -208,8 +210,11 @@ a:hover{
     align-items: center;
 }
 .delete-button >button {
-     padding:3px;
-     color:rgba(255, 255, 255, 0.411);
+    padding:3px;
+    background: none;
+	border: none;
+	font: inherit;
+    color:rgba(255, 255, 255, 0.411);
 }
 .scale {
     border-radius: 20px;
@@ -224,9 +229,9 @@ a:hover{
     width: 30px;
 }
 span{
-    color:black;
-    padding:2px;
-    border-radius:6%;
+    margin:2px;
+    padding:1px;
+    border-radius:10px;
    
 }
 .dark-green{
@@ -248,10 +253,74 @@ span{
     background-color: red;
 }
 
+@media only screen and (min-width: 600px){
+    a {
+       font-size: 10pt;
+       padding:8px;
+    }
+    .list-container {
+      font-size:15pt; 
+    }
 
+}
 
-/* mediaQuery 
-.app-container{
+@media only screen and (min-width: 800px){
+    .home{
+        height:78vh;
+    }
+
+    .app-container{
    background-image: linear-gradient(to right, rgb(45, 100, 250), rgb(30, 203, 255));
-  
-} */
+    } 
+
+    .currancyform{
+        flex-direction: row; 
+        width:80%;
+}
+.about{
+   display:flex;
+   flex-direction: row;
+   align-items: start;
+   height:78vh;
+   justify-content:center;
+    align-items: center;
+
+}
+
+.article > h2 {
+    text-align: center;
+    margin:5px;
+    font-family: "spartan-Bold";
+}
+.article > p {
+    font-family: "spartan-normal"; 
+    padding: 5px 10px;
+    
+}
+.article{
+    display:flex;
+    flex-direction:column;
+    margin:5px;
+    align-content: center;
+    justify-content:center;
+    width:80%;
+    border-radius:10px;
+    border:white solid 2px;
+    font-size: 10pt;
+    height:400px;  
+    align-items: center;
+    
+}
+.currancyform > input {
+   height: 50px;
+   width: 25%;
+}
+span{
+    margin:2px;
+    padding:3px;
+    border-radius:10px;
+}
+
+}
+
+
