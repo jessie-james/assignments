@@ -173,11 +173,19 @@ select{
     height: 100%;
     width: 30px;
 }
+span{
+    color:black;
+    padding:2px;
+    border-radius:6%;
+   
+}
 .dark-green{
     background-color: darkgreen;
+    
 }
 .green{
     background-color: rgb(0, 208, 0);
+    
 }
 .yellow{
     background-color: yellow;

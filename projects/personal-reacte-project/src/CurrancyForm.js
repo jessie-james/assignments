@@ -3,6 +3,7 @@ import CountrySelect from './CountrySelect.js'
 import { withGlobal } from './GlobalProvider'
 
 const CurrancyForm = (props) => {
+
         return (
             <form className="currancyform" onSubmit={(e) => props.globalSubmit(e, props.option1, props.option2, props.number)}>
                 <input type="number" name='amount' value={props.number} placeholder="Amount" onChange={props.amountChange}></input>

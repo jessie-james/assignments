@@ -5,13 +5,13 @@ const WhyUse = () => {
         <div className="article" >
             <h2>How to Use</h2>
             <p>
-                Exchange rates are considered one fo the hardest market to understand. This site is designed to help break down the basics of what and exchange rate means.  Exchange rates are chanign every day as eh golba stock market fluxtuatiaes. 
-                This means alot to peopl who are traveling ut even more  if you are an investor. Make sure to pay carful attention to the market trends  if your form of curracy is trending down or starting to become weak comparted to where you are
-                 traveling it may be time to exchange before you leave.</p>
+                Exchange rates are used everyday But how much do you actually understand about the rate. Do you know if the Exchange rate is good or bad? High or Low? 
+            </p>
             <p>
-                 Our Key below will help you. If the country code is  dark green it is <span>Very Strong</span> light green  means that it is still <span>Strong</span> but if you are not investing 
-                or going on a super expensive trip it probably wont effect you. Yellow means that the rate of exchange is about <span>Equal</span> not strong not weak. if the country color turns to orange you know your dollar is becoming <span>weaker</span>
-                in the gobal market. Lastly if you see the color Red be aware that your currancy is considered <span>Very Weak</span> in the global market/ against the country of comparison and in exchangi your money you will lose out in the exchange.
+                Our site is designed to provided fast and simple answers.
+                Our Strong vs Weak Currancy Code  is the key. If you see Dark Green the currancy is considered <span className="dark-green">Very Strong</span> in comparison to the oposing currancy. Light Green is still <span className="green">Strong</span> 
+                but wont affect you much unless you will be exchaning alot of money. Yellow means that the rate is about <span className ="yellow">Equal</span>. Orange indicates know your that it is becoming a <span className ="orange">Weaker</span> currancy
+                but again little affect. Lastly, Red  should make you aware that currancy is <span className = 'red'>Very Weak</span> and you will lose out in the exchange.
             </p>
         </div>
     )

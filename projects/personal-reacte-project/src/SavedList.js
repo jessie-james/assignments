@@ -2,13 +2,26 @@ import React from 'react'
 import ListItem from './ListItem'
 import {withGlobal} from './GlobalProvider'
 
-const SavedList = (props) => {
-    const mappedList = props.saved.map((item, i) => <ListItem item={item} />)
+class SavedList extends React.Component {
+    constructor() {
+        super()
+        this.state ={
 
-    return (
-        <div className="saved-rates-container">
-            {mappedList} 
-        </div>
-    )
+        }
+        
+    }
+    componentDidMount() {
+        // this.props.getList()
+    
+    }
+    render() {
+        const mappedList = this.props.saved.map((item, i) => <ListItem key={i} item={item} />)
+
+        return (
+            <div className="saved-rates-container">
+                {mappedList}
+            </div>
+        )
+    }
 }
 export default withGlobal(SavedList)
