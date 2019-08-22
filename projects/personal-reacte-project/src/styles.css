@@ -2,59 +2,104 @@
     margin:0;
     padding:0;
 }
+@font-face{
+    font-family:"spartan-normal";
+    src: url('./fonts/SpartanMB-Regular.otf');
+}
+@font-face {
+    font-family: "spartan-Bold";
+    src: url('./fonts/SpartanMB-Bold.otf');
+}
+@font-face {
+    font-family: "spartan-SemiBold";
+    src: url('./fonts/SpartanMB-SemiBold.otf');
+}
+
 .app-container{
-    height:100vh;
-    background-color: lightgray;
-    font-size:20pt;
+    height:100%;
+    background-image: linear-gradient( rgb(45, 100, 250), rgb(30, 203, 255));
+    font-size:10pt;
+    font-family:"spartan-normal";
+    color:rgba(255, 255, 255, 0.918);
+    
 }
 
 .header-container{
     display:flex;
     justify-content: space-between;
-    background: #333;
-    height:10%;
     justify-items: center;
     align-items:center;
-    color: rgb(159, 167, 237);
-    text-shadow: 3px 3px 9px;
+    padding:30px 15px;
+}
+.header-container > h1{
+    font-size:15pt;
+}
+.nav-bar{
+    display:flex;
+    justify-content: space-evenly;
+}
+a {
+    text-decoration: none;
+    font-size: 7pt;
+    text-shadow: none;
+    color:rgba(255, 255, 255, 0.692);
+    padding:5px;
 }
 
+a:hover{
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.918);
+    font-size: 9pt;
+    
+}
+.home{
+    display: flex; 
+    color:rgba(255, 255, 255, 0.918);
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.home >h3 {
+    padding:20px 50px;
+}
+
+.currancyform{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%
+
+}
 .currancyform > input {
-   height: 100px;
-   width: 200px;
-   background-color:rgb(179, 177, 177);
+   height: 50px;
+   width: 70%;
    border-radius: 4%;
-   border: rgb(148, 147, 147) solid 2px;
-   text-align: center;
-   font-size: 24pt;
+   text-align:end;
+   font-size: 20pt;
    color: rgb(74, 73, 73);
+   margin:10px 0px;
+   background-color: rgba(255, 255, 255, 0.918);
 }
 ::placeholder{
     color: rgb(74, 73, 73);
 }
-
-a{
+.country-selecter{
+    height: 50px;
+    width: 28%;
     margin:10px;
-    text-decoration: none;
-    color:rgb(76, 92, 238);
-    font-size: 15pt;
-    text-shadow: none;
-}
-
-.home{
-    display:flex;
-    flex-direction: column;
-    height:80vh;
-    width:100%;
-    background:rgb(174, 166, 166);
-    justify-content: space-around; 
-    align-items: center ;
-}
-.returned-results{
-    display:flex;
-    flex-direction: column;
+    color: rgb(74, 73, 73);
     text-align: center;
-    color:rgb(76, 92, 238);
+    font-size: 24pt;
+    border-radius: 4%;
+    background: url("https://i.ibb.co/b7xjLrB/selectbox-arrow.png") right center no-repeat;
+    background-color: rgba(255, 255, 255, 0.918);
+    appearance: none;
+}
+.mobile-form{
+    width:100%;
+    margin:10px 0px; 
 }
 .currancyform{
     display:flex;
@@ -62,110 +107,115 @@ a{
     width: 100%;
     text-align: center;
 }
-
-select{
-   height: 100px;
-   width: 200px;
-   border: rgb(148, 147, 147) solid 2px;
-   background-color:rgb(179, 177, 177);
-   border-radius: 4%;
-   text-align: center;
-   font-size: 24pt;
-   color: rgb(74, 73, 73);
-}
 .submit{
-    color:rgb(76, 92, 238);
-    font-size:24pt;
-    border: rgb(159, 167, 237)solid 2px;
-    background-color: rgb(159, 167, 237);
-    width:400px;
-    height:80px;
-    border-radius:2%;
-    box-shadow: 10px 10px 10px rgba(76, 92, 238, 0.612);
-
+    background-color:rgb(224, 223, 119);
+    color:rgba(0, 50, 189, 0.76);
+    font-size:20pt;
+    font-family: "spartan-SemiBold";
+    height: 50px;
+    width: 70%;
+    border-radius:25px ;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.493);
+    margin:30px 0px;
 }
 
 .save{
-    display:flex;
-    align-self: flex-end;
-    color:rgb(76, 92, 238);
+    margin:10px ;
+    background-color:rgb(224, 223, 119);
+    color:rgba(0, 50, 189, 0.76);
     font-size:20pt;
-    border: rgb(159, 167, 237)solid 2px;
-    background-color: rgb(159, 167, 237);
-    margin:0px 90px 0px 0px;
-    width:150px;
-    text-align:center;
-    justify-content: center;
-    border-radius:2%;
-    box-shadow: 10px 10px 10px rgba(76, 92, 238, 0.612);
+    font-family: "spartan-normal";
+    height: 40px;
+    width: 70%;
+    border-radius:25px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.493);
+    text-align: center;
 }
 
-.list-container{
+.returned-results{
+    margin:10px 0px 30px;
     display:flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     text-align: center;
-    margin:10px;
-}
-.saved-country{
-    border: rgb(148, 147, 147) solid 2px;
-    padding:4px;
+
 }
 
 .about{
-   background:rgb(174, 166, 166);
-   height:80vh;
    display:flex;
+   flex-direction: column;
    align-items: center;
 
 }
 .article > h2 {
     text-align: center;
     margin:10px;
-    color:rgba(76, 92, 238, 0.728);
+    font-family: "spartan-Bold";
 }
 .article > p {
-    margin:20px 0px;
-    color:rgb(79, 79, 79);
-    padding:0px 30px;
+    font-family: "spartan-normal"; 
+    padding:10px 20px;
+    
 }
 .article{
-    margin:20px;
+    margin:10px;
     align-content: center;
-    width:33%;
-    border-radius:3px;
-    border:rgb(76, 92, 238)solid 2px;
+    width:80%;
+    border-radius:10px;
+    border:white solid 2px;
     font-size: 15pt;
     height:80%;  
 }
-.saved-rates-container{
-    height:80vh;
-    background:rgb(174, 166, 166);
+
+.saved-rates-container {
+    height:75vh;
 }
+
+.list-container {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 10px;
+    font-size:10pt;
+    align-items: center;
+    
+}
+.exchanged {
+    display: flex;
+    flex-direction: column;
+}
+
+.saved-country {
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 10px 20px;
+    height:50%;
+    border-radius: 15px;
+    font-size:15pt;
+    text-align: center;
+}
+
 
 .footer{
     height:15%;
-    background-color:rgb(57, 54, 54);
     display:flex;
     justify-content: flex-end;
 }
 .scale-label{
-    margin:0px 30px;
+    margin:40px 20px;
     display:flex;
+    
+    font-family: "spartan-Bold";
     justify-content: center;
     align-items: center;
 }
 .delete-button >button {
-     border: rgb(181, 180, 180) solid 2px;
-     border-radius: 100%;
-     font-size:16pt;
      padding:3px;
-     background-color:rgb(203, 200, 200);
-     color:rgb(152, 148, 148);
+     color:rgba(255, 255, 255, 0.411);
 }
 .scale {
-    border:black solid 3px;
+    border-radius: 20px;
      display:flex;
-     height:50%;
+     height:100%;
+     width: 75%;
      margin:0px 10px;
 }
 
@@ -198,3 +248,10 @@ span{
     background-color: red;
 }
 
+
+
+/* mediaQuery 
+.app-container{
+   background-image: linear-gradient(to right, rgb(45, 100, 250), rgb(30, 203, 255));
+  
+} */

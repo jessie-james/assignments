@@ -9,13 +9,13 @@ const Results = (props) => {
     return (
         <div className="results">
             <div className="returned-results">
-                <h1>{rates}  {props.option1}</h1>
-                <h6>{reversRate}  {props.option2}</h6>
-                <h3>ExchangeRate</h3>
+                <h1>{rates} = {props.option2}</h1>
+                <h5>{reversRate} = {props.option1}</h5>
+                <h2>Exchange Rate</h2>
             </div>
             <div className="returned-results">
-                <h1>{resultAmount}</h1>
-                <h3>Exchanged Amount</h3>
+                <h2>{resultAmount}</h2>
+                <h2>Exchanged Amount</h2>
             </div>
             <button className="save" onClick={props.globalSave}>Save</button>
         </div>
