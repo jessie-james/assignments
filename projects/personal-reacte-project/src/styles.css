@@ -50,7 +50,6 @@ a:hover{
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.918);
     font-size: 9pt;
-    
 }
 
 .home{
@@ -175,6 +174,31 @@ a:hover{
     height:78vh;
     
 }
+
+.saved-it-true{
+    color:blue;
+    font-size:8pt;
+    animation: opacityOn  forwards ;
+    animation-delay: 2s;
+
+}
+
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.saved-it-false{
+    display:none;
+}
 .saved-rates-container > h1 {
     margin: 40px;
     text-align:center;
@@ -201,6 +225,7 @@ a:hover{
     height:50%;
     border-radius: 15px;
     font-size:15pt;
+    width:10%;
     font-family: "spartan-SemiBold";
     text-align: center;
 }

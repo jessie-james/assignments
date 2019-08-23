@@ -15,6 +15,7 @@ class GlobalProvider extends React.Component {
             resultAmount: "0.00",
             fromColor: '',
             toColor: '',
+            isSaved:false,
             saved:JSON.parse(localStorage.getItem('saved')) || []
         }
     }
@@ -39,11 +40,11 @@ class GlobalProvider extends React.Component {
         e.preventDefault()
         axios.get(`https://data.fixer.io/api/convert?access_key=e99f1218ad91423282c6bb4d9013b35b&from=${option2}&to=${option1}&amount=${number}`).then(response => {
             this.setState({
-                reverseRate: response.data.info.rate
+                reverseRate: response.data.info.rate.toFixed(2)
             })
         })
         axios.get(`https://data.fixer.io/api/convert?access_key=e99f1218ad91423282c6bb4d9013b35b&from=${option1}&to=${option2}&amount=${number}`).then(response => {
-            this.setState({ rate: response.data.info.rate, resultAmount: response.data.result }, () => {
+            this.setState({ rate: response.data.info.rate.toFixed(2), resultAmount: response.data.result.toFixed(2), isSaved: false  }, () => {
                 if (this.state.rate > 10) {
                     this.setState({ fromColor: '#21660C' , toColor: 'red'})
                 } else if (this.state.rate > 1) {
@@ -52,7 +53,7 @@ class GlobalProvider extends React.Component {
                     this.setState({ fromColor: '#E6BA1C' , toColor: '#E6BA1C'})
                 } else if (this.state.rate < 1) {
                     this.setState({fromColor:'#C76718', toColor: '#5EA10D'})
-                }else if (this.state.rate <= 0.05){
+                }else if (this.state.rate <= 0.1){
                     this.setState({ fromColor: 'red' , toColor: '#21660C'})
                 } else {
                     this.setState({ fromColor: 'rgb(74, 73, 73)' , toColor: 'rgb(74, 73, 73)'})
@@ -65,8 +66,8 @@ class GlobalProvider extends React.Component {
     globalSave = (e) => {
         // e.preventDefault()
         //tell user that it has been saved
-        this.setState(prevState => ({
-            saved: [...prevState.saved, { savedCode1: prevState.option1, savedCode2: prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount, fromColor:prevState.fromColor, toColor:prevState.toColor }]}), ()=> {localStorage.setItem('saved', JSON.stringify(this.state.saved))
+        this.setState(prevState => ({isSaved: true ,
+            saved: [...prevState.saved, { savedCode1: prevState.option1, savedCode2: prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount, fromColor:prevState.fromColor, toColor:prevState.toColor, }]}), ()=> {localStorage.setItem('saved', JSON.stringify(this.state.saved))
         }) 
     }
     
