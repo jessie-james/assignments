@@ -1,13 +1,11 @@
 import React from 'react'
 import Nav from './Nav.js'
-import StrongDollarScale  from './StrongDollarScale.js'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return(
     <div className="header-container">
-        <h1>Strong Xchange
-            
-        </h1>
+            <Link to='/' className="header">Strong Xchange</Link>
         <Nav/>
     </div>
     )    

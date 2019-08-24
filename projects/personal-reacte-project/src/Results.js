@@ -15,14 +15,12 @@ const Results = (props) => {
                 <h4>1 {props.option2} = {reverseRate} {props.option1} </h4>
                 <h4>1 {props.option1} = {rates} {props.option2} </h4>
                 <h2>Exchange Results</h2>
-                
-                
-               
             </div>
-            <button className="save" onClick={props.globalSave}>Save</button>
             <div className={props.isSaved ? 'saved-it-true' : "saved-it-false"}>
                 Item is saved in Saved Rates
                 </div>
+            <button className="save" onClick={props.globalSave}>Save</button>
+            
             
         </div>
     )

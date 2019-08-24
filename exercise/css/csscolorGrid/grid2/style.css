@@ -1,0 +1,55 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 50px 50px 50px;
+
+}
+
+.red {
+    background: red;
+    grid-column:1/5;
+}
+
+.box {
+  
+    border: 3px white solid;
+}
+
+.top-grid {}
+
+.blue {
+   grid-row:2/4;
+    background: blue;
+}
+
+.green {
+   
+    background: green;
+    grid-column: 2/5;
+}
+
+.m-gird {}
+
+.purpleO {
+    
+    background: purple;
+    grid-column: 3/4;
+    
+}
+.purpleT {
+
+    background: purple;
+    /* grid-column: 4/5; */
+   
+}
+
+.yellow {
+   
+    background: yellow;
+
+}
+
+.bottom-gird {
+    grid-column: 1/4;
+
+}

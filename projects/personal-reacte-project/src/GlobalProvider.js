@@ -15,7 +15,8 @@ class GlobalProvider extends React.Component {
             resultAmount: "0.00",
             fromColor: '',
             toColor: '',
-            isSaved:false,
+            isSaved: false,
+            badgeNum:1,
             saved:JSON.parse(localStorage.getItem('saved')) || []
         }
     }
@@ -64,11 +65,14 @@ class GlobalProvider extends React.Component {
 
 
     globalSave = (e) => {
-        // e.preventDefault()
-        //tell user that it has been saved
-        this.setState(prevState => ({isSaved: true ,
-            saved: [...prevState.saved, { savedCode1: prevState.option1, savedCode2: prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount, fromColor:prevState.fromColor, toColor:prevState.toColor, }]}), ()=> {localStorage.setItem('saved', JSON.stringify(this.state.saved))
-        }) 
+        this.setState(prevState => ({
+            isSaved: true, 
+            saved: [...prevState.saved, { savedCode1: prevState.option1, savedCode2: prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount, fromColor: prevState.fromColor, toColor: prevState.toColor, }],
+            badgeNum: this.state.saved.length + 1
+        }),
+            () => {
+                localStorage.setItem('saved', JSON.stringify(this.state.saved))
+            }) 
     }
     
  
@@ -83,8 +87,12 @@ class GlobalProvider extends React.Component {
     }
     deleteItem = (myitem) => {
         this.setState(prevState => ({
+            badgeNum: this.state.saved.length - 1,
             saved: prevState.saved.filter(item => item !== (myitem))
         }), ()=> localStorage.setItem('saved', JSON.stringify(this.state.saved))) 
+    }
+    viewedSaved = () => {
+        this.setState({ isSaved: false })
     }
     
     render() {
@@ -98,7 +106,8 @@ class GlobalProvider extends React.Component {
                 handleOptions2: this.handleOptions2,
                 getList: this.getList,
                 deleteItem: this.deleteItem,
-                mysaved:this.mysaved,
+                mysaved: this.mysaved,
+                viewedSaved: this.viewedSaved, 
                 ...this.state
             }}>
                 {this.props.children}

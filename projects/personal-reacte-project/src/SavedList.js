@@ -11,7 +11,7 @@ class SavedList extends React.Component {
         
     }
     componentDidMount() {
-        // this.props.getList()
+        this.props.viewedSaved()
     
     }
     render() {

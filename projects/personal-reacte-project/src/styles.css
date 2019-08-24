@@ -30,26 +30,42 @@
     align-items:center;
     padding:30px 15px;
 }
-.header-container > h1{
-    font-size:15pt;
+.fas:hover{
+    font-size: 20pt;
+    transition: 0.5s;
 }
+
+.header {
+    font-size:15pt;
+    text-decoration: none;
+}
+.header:hover {
+   
+    color: rgb(255, 255, 255);
+    font-size: 20pt;
+}
+
 .nav-bar{
     display:flex;
     justify-content: space-evenly;
 }
+a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.692);
 
-a {
+}
+.linking{
     text-decoration: none;
     font-size: 7pt;
     text-shadow: none;
     color:rgba(255, 255, 255, 0.692);
-    padding:2px;
+    margin:3px 5px;
 }
 
-a:hover{
+.linking:hover{
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.918);
-    font-size: 9pt;
+    font-size: 10pt;
 }
 
 .home{
@@ -117,6 +133,32 @@ a:hover{
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.493);
     margin:30px 0px;
 }
+.sumbit:hover{
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.493);
+}
+.submit:active {
+    
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    /* transition: 0.5s; */
+}
+
+.badge[data-badge]:after {
+    content: attr(data-badge);
+    position: absolute;
+    top: 20px;
+    right: 6px;
+    font-size: .7em;
+    background: green;
+    color: white;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #333;
+}
+
 
 .save{
     margin:10px ;
@@ -127,8 +169,14 @@ a:hover{
     height: 40px;
     width: 70%;
     border-radius:25px;
-    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.493);
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.493);
     text-align: center;
+}
+.save:active{
+    background-color:rgb(206, 204, 100);
+    box-shadow: 0 5px #666;
+     box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.493);
+    transform: translateY(4px);
 }
 
 .returned-results{
@@ -172,12 +220,12 @@ a:hover{
 
 .saved-rates-container {
     height:78vh;
-    
+  
 }
 
 .saved-it-true{
     color:blue;
-    font-size:8pt;
+    font-size:10pt;
     animation: opacityOn  forwards ;
     animation-delay: 2s;
 
@@ -251,17 +299,16 @@ a:hover{
     color:rgba(255, 255, 255, 0.411);
 }
 .scale {
-    border-radius: 20px;
+    border-radius: 10px;
      display:flex;
-     height:20pt;
-     width: 75%;
+     height:30px;
+     width: 150px;
+    background-image: linear-gradient(to right, green,yellow, red);
      margin:0px 10px;
 }
 
-.box{
-    height: 100%;
-    width: 30px;
-}
+
+
 span{
     margin:2px;
     padding:1px;
@@ -288,7 +335,7 @@ span{
 }
 
 @media only screen and (min-width: 600px){
-    a {
+    .linking {
        font-size: 10pt;
        padding:8px;
     }
@@ -301,6 +348,16 @@ span{
 @media only screen and (min-width: 950px){
     .home{
         height:85vh;
+    }
+    .header {
+        font-size: 25pt;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .header:hover {
+        color: rgb(255, 255, 255);
+        font-size: 30pt;
     }
 
     .app-container{
@@ -319,7 +376,7 @@ span{
 .home{
     font-size: 15pt;
 }
- a {
+ .linking{
        font-size: 10pt;
        padding:8px;
     }
