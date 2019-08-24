@@ -16,7 +16,8 @@ class GlobalProvider extends React.Component {
             fromColor: '',
             toColor: '',
             isSaved: false,
-            badgeNum:1,
+            badgeNum: 1,
+            isViewed:false,
             saved:JSON.parse(localStorage.getItem('saved')) || []
         }
     }
@@ -50,7 +51,7 @@ class GlobalProvider extends React.Component {
                     this.setState({ fromColor: '#21660C' , toColor: 'red'})
                 } else if (this.state.rate > 1) {
                     this.setState({ fromColor: '#5EA10D' , toColor: '#C76718'})
-                } else if (this.state.rate === 1) {
+                } else if (this.state.rate == 1) {
                     this.setState({ fromColor: '#E6BA1C' , toColor: '#E6BA1C'})
                 } else if (this.state.rate < 1) {
                     this.setState({fromColor:'#C76718', toColor: '#5EA10D'})
@@ -67,6 +68,7 @@ class GlobalProvider extends React.Component {
     globalSave = (e) => {
         this.setState(prevState => ({
             isSaved: true, 
+            isViewed: true, 
             saved: [...prevState.saved, { savedCode1: prevState.option1, savedCode2: prevState.option2, savedrate: prevState.rate, savedAmount: prevState.resultAmount, fromColor: prevState.fromColor, toColor: prevState.toColor, }],
             badgeNum: this.state.saved.length + 1
         }),
@@ -91,8 +93,11 @@ class GlobalProvider extends React.Component {
             saved: prevState.saved.filter(item => item !== (myitem))
         }), ()=> localStorage.setItem('saved', JSON.stringify(this.state.saved))) 
     }
+    viewed = () => {
+        this.setState({ fromColor: 'rgb(74, 73, 73)', toColor: 'rgb(74, 73, 73)', number:"", })
+    }
     viewedSaved = () => {
-        this.setState({ isSaved: false })
+        this.setState({ isViewed: false })
     }
     
     render() {
@@ -107,6 +112,7 @@ class GlobalProvider extends React.Component {
                 getList: this.getList,
                 deleteItem: this.deleteItem,
                 mysaved: this.mysaved,
+                viewed:this.viewed,
                 viewedSaved: this.viewedSaved, 
                 ...this.state
             }}>

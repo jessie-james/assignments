@@ -3,13 +3,7 @@ import ListItem from './ListItem'
 import {withGlobal} from './GlobalProvider'
 
 class SavedList extends React.Component {
-    constructor() {
-        super()
-        this.state ={
-
-        }
-        
-    }
+    
     componentDidMount() {
         this.props.viewedSaved()
     

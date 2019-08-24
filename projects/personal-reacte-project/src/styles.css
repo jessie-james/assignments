@@ -342,6 +342,12 @@ span{
     .list-container {
       font-size:15pt; 
     }
+    .badge[data-badge]:after {
+        content: attr(data-badge);
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
 
 }
 
@@ -426,6 +432,7 @@ span{
     padding:3px;
     border-radius:10px;
 }
+
 
 }
 
