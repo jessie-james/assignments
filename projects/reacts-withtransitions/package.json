@@ -1,15 +1,18 @@
 {
-  "name": "rooto-routers",
+  "name": "personal-reacte-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/free-solid-svg-icons": "^5.10.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "axios": "^0.19.0",
+    "font-awesome": "^4.7.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-pose": "^4.0.8",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.0",
-    "react-transition-group": "file:react-transition-group",
-    "styled-components": "^4.3.2"
+    "react-scripts": "3.1.1",
+    "react-transition-group": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

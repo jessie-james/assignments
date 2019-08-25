@@ -1,7 +1,9 @@
 import React from 'react'
+import styled from "styled-components";
 
 const Services = () => {
     return (
+        <Wrapper>
         <div className="main-body">
             <ul className="services">
                 <li className="service">Leaking pipe repair</li>
@@ -9,7 +11,13 @@ const Services = () => {
                 <li className="service">Garbage disposal repair</li>
                 <li className="service">Garbage disposal repair</li>
             </ul>
-        </div>
+            </div>
+        </Wrapper>
     )
 }
+
+const Wrapper = styled.div`
+    /* omitted */
+`;
+
 export default Services
