@@ -13,7 +13,7 @@ class SavedList extends React.Component {
         const mappedList = this.props.saved.map((item, i) => <ListItem key={i} item={item} />)
 
         return (
-            <div className="saved-rates-container">
+            <div className="saved-rates-container page">
                 <h1>Saved Exchanged Rates</h1>
                 {mappedList}
             </div>

@@ -6,7 +6,7 @@ import StrongDollarScale from './StrongDollarScale'
 
 const Home =()=>{
         return (
-            <div className="home">
+            <div className="home page">
                 <h3>This is a cool app to find out the strength and rate of a currency exchange</h3>
                 <h4><StrongDollarScale /></h4>
                 <CurrancyForm />

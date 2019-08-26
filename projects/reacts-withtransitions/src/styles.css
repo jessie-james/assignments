@@ -333,6 +333,23 @@ span{
 .red{
     background-color: red;
 }
+.fade-appear,
+.fade-enter{
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active{
+    opacity: 1;
+    transition: opacity 300ms linear 150ms
+}
+/* 
+.page{
+    position: absolute;
+    top:800px;
+    left:0;
+    right:0;
+} */
 
 @media only screen and (min-width: 600px){
     .linking {

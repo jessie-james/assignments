@@ -5,7 +5,7 @@ import ExchangeBestPractices from './ExchangeBestPractices'
 
 const About = () => {
     return (
-        <div className="body about">
+        <div className="body about page">
              <WhyUse />
             <StrongCurrancy />
             <ExchangeBestPractices/>
