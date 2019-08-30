@@ -1,0 +1,45 @@
+[{
+    "fname":"jane",
+    "lname":"john",
+    "living":true,
+    "bounty Amount":10000,
+    "type":"jedi",
+    "_id": "wersSDFWs"
+},
+{
+    "fname": "jane",
+    "lname": "john",
+    "living": true,
+    "bounty Amount": 10000,
+    "type": "jedi",
+    "_id": "wersSDFWsiohoih"
+},{
+    "fname": "jane",
+    "lname": "john",
+    "living": true,
+    "bounty Amount": 10000,
+    "type": "jedi",
+    "_id": "wersSDFWsuhfuygug"
+},{
+    "fname": "jane",
+    "lname": "john",
+    "living": true,
+    "bounty Amount": 10000,
+    "type": "jedi",
+    "_id": "wersSwewefsdDFWs"
+},{
+    "fname": "jane",
+    "lname": "john",
+    "living": true,
+    "bounty Amount": 10000,
+    "type": "jedi",
+    "_id": "wersasdfasdfs"
+},{
+    "fname": "jane",
+    "lname": "john",
+    "living": true,
+    "bounty Amount": 10000,
+    "type": "jedi",
+    "_id": "wesdfawed"
+}
+]
