@@ -1,0 +1,43 @@
+[{
+    "name": "clean room",
+    "description": "The description of the todo",
+    "imageUrl": "http://www.myimage....",
+    "completed": false ,
+    "_id": "23k4sdfsflh23h2"
+},
+
+{
+    "name": "do laundry",
+    "description": "The description of the todo",
+    "imageUrl": "http://www.myimage....",
+    "completed": false ,
+    "_id": "23k4lasdfh23h2"
+},
+{
+    "name": "make lunch",
+    "description": "The description of the todo",
+    "imageUrl": "http://www.myimage....",
+    "completed": false,
+    "_id": "23k4lh2zxcv3h2"
+} ,
+{
+    "name": "drink water",
+    "description": "The description of the todo",
+    "imageUrl": "http://www.myimage....",
+    "completed": true,
+    "_id": "23k4qwelh23h2"
+} ,
+{
+    "name": "Workout",
+    "description": "The description of the todo",
+    "imageUrl": "http://www.myimage....",
+    "completed": false,
+    "_id": "23k4lhwetyerty23h2"
+}, 
+{
+    "name": "remember your name",
+    "description": "The description of the todo",
+    "imageUrl": "http://www.myimage....",
+    "completed": true,
+    "_id": "23k4vedwsdftwlh23h2"
+}]
