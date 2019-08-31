@@ -1,5 +1,5 @@
 {
-  "name": "intro-express",
+  "name": "servers",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.6.11"
+    "uuid": "^3.3.3"
   }
 }
