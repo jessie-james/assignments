@@ -2,11 +2,6 @@ const express = require("express")
 const authRouter = express.Router();
 const jwt = require("jsonwebtoken");
 
-let User
-if (credntials.istheripist) {
-    User = require("../models/theripist");
-}
-else User = require('..modles/student')
 
 
 authRouter.post("/signup", (req, res, next) => {

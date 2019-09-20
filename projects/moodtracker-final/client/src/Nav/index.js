@@ -9,7 +9,7 @@ function Nav() {
                     <Link to="/login">login</Link>
                 </div>
                 <div className="nav-link">
-                    <Link to="/login">logout</Link>
+                    <Link to="/logout">logout</Link>
                 </div>
             </div>
         </div>
