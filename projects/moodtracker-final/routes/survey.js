@@ -3,7 +3,7 @@ const surveyRouter = express.Router();
 const Survey = require("../models/survey");
 
 surveyRouter.get("/", (req, res, next) => {
-    //if admin get all else  retrun error that they are not authorized.
+    //if theripist: req.theripist._id }, || student: req.student._id
     Todo.find({ user: req.user._id }, (err, surveys) => {
         if (err) {
             res.status(500);
