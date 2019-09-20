@@ -6,15 +6,23 @@ const surveySchema = new Schema({
         type: String,
         required: true
     },
+    // patient code
     completed: {
         type: Boolean,
         default: false
     },
+    mood: {
+        type: Array,
+    },
+    extraQuestions: {
+        type: Array,
+    },
     user: {
         type: Schema.Types.ObjectId,
-        ref: "User",
-        required: true
+        ref: "Theripist",
+        required: true,
     }
+
 });
 
-module.exports = mongoose.model("Survey", survyeSchema);
+module.exports = mongoose.model("Survey", surveySchema);

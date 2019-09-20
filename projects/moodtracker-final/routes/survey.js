@@ -3,8 +3,8 @@ const surveyRouter = express.Router();
 const Survey = require("../models/survey");
 
 surveyRouter.get("/", (req, res, next) => {
-    //if theripist: req.theripist._id }, || student: req.student._id
-    Todo.find({ user: req.user._id }, (err, surveys) => {
+    if (...)theripist: req.theripist._id }, || student: req.student._id
+    Survey.find({ theripist: req.theripist._id }, (err, surveys) => {
         if (err) {
             res.status(500);
             return next(err);

@@ -1,7 +1,13 @@
 const express = require("express")
-const User = require("../models/student");
 const authRouter = express.Router();
 const jwt = require("jsonwebtoken");
+
+let User
+if (credntials.istheripist) {
+    User = require("../models/theripist");
+}
+else User = require('..modles/student')
+
 
 authRouter.post("/signup", (req, res, next) => {
     User.findOne({ username: req.body.username }, (err, existingUser) => {
