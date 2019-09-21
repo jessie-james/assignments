@@ -1,0 +1,27 @@
+.dashContainer{
+    margin:20px;
+}
+.add-Client-link{
+    display:flex;
+    margin: 2px 0px;
+    border:grey solid 2px;
+}
+.link-add{
+    width: 100%;
+    display:flex;
+    text-align:center;
+    align-content: center;
+    justify-content: center;
+    padding:5px;
+    
+}
+.link-add{
+    color:gray;
+}
+.add-div{
+ width:30px;
+ height:20px;
+ padding:5px;
+ text-align:center;
+ border-right:grey 2px solid;
+}
