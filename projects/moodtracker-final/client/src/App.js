@@ -6,6 +6,7 @@ import './moodtrackmain.css'
 import Signup from "./Auth/signup";
 import TheripistDash from "./TheripistSide";
 import AddClientSurvey from "./TheripistSide/AddClientSurvey/index.js"
+import ClientProfile from './TheripistSide/CurrentClients/ClientProfile.js'
 // import ProtectedRoute from "./Auth/ProtectedRoute";
 
 
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/login" component={Login} />
                 <Route path="/dashboard" component={TheripistDash} />
                 <Route path="/addclient" component={AddClientSurvey} />
+                <Route path="/clientProfile" component ={ClientProfile}/>
                 {/* <ProtectedRoute  path="/theripistdash" component={Theripist} />
                 <ProtectedRoute path="/studentdash" component={Student} /> */}
                 <Route exact path="/" component={Login}/>

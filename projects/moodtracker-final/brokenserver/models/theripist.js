@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt");
 
 const theripistSchema = new Schema({
-    userName: {
+    username: {
         type: String,
         required: true,
         unique: true,
@@ -11,15 +11,18 @@ const theripistSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    clients: {
+        type: Array,
     }
 });
 
 theripistSchema.pre("save", function (next) {
-    const theripist = this;
-    if (!theripist.isModified("password")) return next();
-    bcrypt.hash(theripist.password, 10, (err, hash) => {
+    const user = this;
+    if (!user.isModified("password")) return next();
+    bcrypt.hash(user.password, 10, (err, hash) => {
         if (err) return next(err);
-        theripist.password = hash;
+        user.password = hash;
         next();
     });
 });
@@ -30,11 +33,11 @@ theripistSchema.methods.checkPassword = function (passwordAttempt, callback) {
         callback(null, isMatch);
     });
 };
-/// is this where i check the user and can change the linking
+
 theripistSchema.methods.withoutPassword = function () {
-    const user = this.toObject();
-    delete user.password;
-    return user;
+    const theripist = this.toObject();
+    delete theripist.password;
+    return theripist;
 };
 
 module.exports = mongoose.model("Theripist", theripistSchema);

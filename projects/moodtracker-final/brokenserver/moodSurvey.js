@@ -1,10 +1,9 @@
 const express = require("express");
 const surveyRouter = express.Router();
-const Survey = require("../models/survey");
+const Survey = require("./models/survey.js");
 
 surveyRouter.get("/", (req, res, next) => {
-    if (...)theripist: req.theripist._id }, || student: req.student._id
-    Survey.find({ theripist: req.theripist._id }, (err, surveys) => {
+    Survey.find({ user: req.user._id }, (err, Surveys) => {
         if (err) {
             res.status(500);
             return next(err);
@@ -15,8 +14,6 @@ surveyRouter.get("/", (req, res, next) => {
 
 surveyRouter.post("/", (req, res, next) => {
     const survey = new Survey(req.body);
-    //only post if admin
-    
     survey.user = req.user._id;
     survey.save(function (err, newSurvey) {
         if (err) {
@@ -27,44 +24,42 @@ surveyRouter.post("/", (req, res, next) => {
     });
 });
 
-surveyRouter.get("/:surveyId", (req, res, next) => {
-    //if admin get by survey ID else get wiht user id?
-    Survey.findOne({ _id: req.params.surveyId, user: req.user._id }, (err, survey) => {
+surveyRouter.get("/:surveyid", (req, res, next) => {
+    Survey.findOne({ _id: req.params.surveyid, user: req.user._id }, (err, survey) => {
         if (err) {
             res.status(500);
             return next(err);
-        } else if (!survey) {
+        } else if (!todo) {
             res.status(404)
-            return next(new Error("No survey found."));
+            return next(new Error("No Survey item found."));
         }
         return res.send(survey);
     });
 });
 
 surveyRouter.put("/:surveyId", (req, res, next) => {
-    Todo.findOneAndUpdate(
+    Survey.findOneAndUpdate(
         { _id: req.params.surveyId, user: req.user._id },
         req.body,
         { new: true },
-        (err, survey) => {
+        (err, todo) => {
             if (err) {
                 console.log("Error");
                 res.status(500);
                 return next(err);
             }
-            return res.send(survey);
+            return res.send(Survey);
         }
     );
 });
 
 surveyRouter.delete("/:surveyId", (req, res, next) => {
-    //only delete if admin
     Survey.findOneAndRemove({ _id: req.params.surveyId, user: req.user._id }, (err, survey) => {
         if (err) {
             res.status(500);
             return next(err);
         }
-        return res.send(survey);
+        return res.send(Survey);
     });
 });
 
