@@ -1,6 +1,6 @@
 import React from 'react';
-import CreateSurvey from '../AddClientSurvey/CreateSurvey.js                 '
-import './survey.css'
+import CreateSurvey from '../AddClientSurvey/CreateSurvey.js'
+import '../AddClientSurvey/survey.css'
 
 function ClientProfile() {
     return (

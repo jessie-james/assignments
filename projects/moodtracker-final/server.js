@@ -6,10 +6,14 @@ const PORT = process.env.PORT || 3742;
 
 require("dotenv").config();
 
+app.use("/", express.json())
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
 
 mongoose.connect("mongodb://localhost:27017/moodtracker",
-    { useNewUrlParser: true },
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    },
     (err) => {
         if (err) throw err;
         console.log("Connected to the moodtracker db");
@@ -17,15 +21,16 @@ mongoose.connect("mongodb://localhost:27017/moodtracker",
 );
 
 app.use("/auth", require("./routes/auth"));
-// app.use('/survey', require("./routes/survey"));
+app.use('/survey', require("./routes/moodsurvey"));
 
-// app.use((err, req, res, next) => {
-//     console.error(err);
-//     if (err.name === "UnauthorizedError") {
-//         res.status(err.status)
-//     }
-//     return res.send({ message: err.message });
-// });
+
+app.use((err, req, res, next) => {
+    console.error(err);
+    if (err.name === "UnauthorizedError") {
+        res.status(err.status)
+    }
+    return res.send({ message: err.message });
+});
 
 app.listen(PORT, () => {
     console.log(`Running on port ${PORT}`);
