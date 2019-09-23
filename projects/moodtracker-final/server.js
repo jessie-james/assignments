@@ -21,7 +21,7 @@ mongoose.connect("mongodb://localhost:27017/moodtracker",
 );
 
 app.use("/auth", require("./routes/auth"));
-app.use('/survey', require("./routes/moodsurvey"));
+app.use("/api/survey", require("./routes/moodsurvey"));
 
 
 app.use((err, req, res, next) => {
