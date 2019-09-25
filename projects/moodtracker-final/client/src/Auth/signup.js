@@ -52,7 +52,7 @@ class Signup extends Component {
                     </div>
                     <input className="auth-input" onChange={this.handleChange} value={this.state.username} name="username" type="text" placeholder="username" />
                     <input className="auth-input" onChange={this.handleChange} value={this.state.password} name="password" type="text" placeholder="password" />
-                    {/* if isstudent true then render student-code */}
+                    {/* if isTheripist false then render student-code */}
                     {/* <input className="auth-input student-code" value="" name="student-code" type="text" placeholder="code" /> */}
                     <label className="remember-switch">
                         <input className="no-input" type="checkbox" />

@@ -2,18 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const surveySchema = new Schema({
-    clientName: {
-        type: String,
-        required: true
-    },
-    clientEmail: {
-        type: String,
-        lowercase: true   
-    },
-    completed: {
-        type: Boolean,
-        default: false
-    },
     moodQuestion: {
         type: Array,
     },

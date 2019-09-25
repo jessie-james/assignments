@@ -7,6 +7,7 @@ clientAxios.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${token}`;
     return config;
 })
+
 const App = React.createContext();
 
 export class AppProvider extends Component {
@@ -19,7 +20,7 @@ export class AppProvider extends Component {
         }
     }
     signup = (userInfo) => {
-        return axios.post("/auth/signup", userInfo)
+        return clientAxios.post("/auth/signup", userInfo)
             .then(response => {
                 const { user, token } = response.data
                 localStorage.setItem("token", token);
@@ -27,6 +28,31 @@ export class AppProvider extends Component {
                 this.setState({
                     user,
                     token
+                });
+                // this.getClients();
+                return response;
+            })
+    }
+
+    login = (credentials) => {
+        return clientAxios.post("/auth/login", credentials)
+            .then(response => {
+                const { token, user } = response.data;
+                localStorage.setItem("token", token)
+                localStorage.setItem("user", JSON.stringify(user))
+                this.setState({
+                    user,
+                    token
+                });
+                // this.getClients();
+                return response;
+            })
+    }
+     addClient = (newClient) => {
+        return clientAxios.post("/api/client/", newClient)
+            .then(response => {
+                this.setState(prevState => {
+                    return {clients: [...prevState.clients, response.data] }
                 });
                 return response;
             })
@@ -37,6 +63,8 @@ export class AppProvider extends Component {
             <App.Provider
                 value={{
                     signup: this.signup,
+                    login: this.login,
+                    addClient:this.addClient,
                     ...this.state
                 }}
             >
