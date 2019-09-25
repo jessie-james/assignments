@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import CreateSurvey from '../AddClientSurvey/CreateSurvey.js'
+import ClientSurvey from './ClientSurvey"
 import '../AddClientSurvey/survey.css'
 import { withContext } from "../../AppContext"
 
@@ -22,6 +23,7 @@ class ClientProfile extends Component {
                     <h3>{this.props.selectedClient.clientCode}</h3>
                 </div>
                 <CreateSurvey/>
+                <ClientSurvey/>
                 {/* results */}
             </div>
         )
