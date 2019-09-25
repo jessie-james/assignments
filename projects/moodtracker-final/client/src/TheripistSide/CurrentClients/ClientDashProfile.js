@@ -4,6 +4,7 @@ import './clientDashProfile.css'
 import { withContext } from "../../AppContext"
 
 function ClientDashProfile(props) {
+    const { _id } = props.client 
     return (
         <div className="profileTab-container">
             <div className="basic-client-info">
@@ -20,7 +21,7 @@ function ClientDashProfile(props) {
             <div className="profile-icons">
                 <div className="p-icon" onClick={() => props.deleteClient(props.client._id)}>Trash</div>
                 <div className="p-icon" onClick={() => props.editClient(props.client._id)}>Edit</div>
-                <Link to="/clientProfile/" className="p-icon" client={props.client}>Full Profile</Link>
+                <Link to={`/clientProfile/${_id}`} className="p-icon" client={props.client}>Full Profile</Link>
             </div>
         </div>
     )

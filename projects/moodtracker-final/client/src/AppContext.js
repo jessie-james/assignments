@@ -14,10 +14,18 @@ export class AppProvider extends Component {
         super()
         this.state = {
             clients: [],
+            selectedClient: {
+                user:""
+            },
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || ""
         }
     }
+
+    componentDidMount() {
+        this.getClients();
+    }
+
     signup = (userInfo) => {
         return clientAxios.post("/auth/signup", userInfo)
             .then(response => {
@@ -69,17 +77,7 @@ export class AppProvider extends Component {
     getClients = () => {
         return clientAxios.get("/api/client")
             .then(response => {
-                this.setState({clients: response.data });
-                return response;
-            })
-            .catch(err => {
-                console.log(err)
-            }) 
-    }
-    
-    getClient = (clientId) => {
-        return clientAxios.get(`/api/client/${clientId}`)
-            .then(response => {
+                this.setState({ clients: response.data });
                 return response;
             })
             .catch(err => {
@@ -87,6 +85,17 @@ export class AppProvider extends Component {
             }) 
     }
 
+    
+    getClient = (clientId) => {
+        console.log(clientId)
+        const selected = this.state.clients.find(function (selected) {
+            return selected._id === clientId;
+        })
+        this.setState({
+            selectedClient: selected
+        })  
+    }
+   
     editClient = (clientId, client) => {
         return clientAxios.put(`/api/client/${clientId}`, client)
             .then(response => {

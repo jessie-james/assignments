@@ -19,7 +19,7 @@ function App() {
                 <Route path="/login" component={Login} />
                 <ProtectedRoute path="/theripistdashboard" component={TheripistDash} />
                 <ProtectedRoute path="/addclient" component={AddClientSurvey} />
-                <ProtectedRoute path="/clientProfile" component ={ClientProfile}/>
+                <ProtectedRoute path="/clientProfile/:_id" component ={ClientProfile}/>
                 {/* <ProtectedRoute  path="/theripistdash" component={Theripist} />
                 <ProtectedRoute path="/studentdash" component={Student} /> */}
                 <Route exact path="/" component={Login}/>
