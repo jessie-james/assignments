@@ -7,7 +7,7 @@ import Signup from "./Auth/signup";
 import TheripistDash from "./TheripistSide";
 import AddClientSurvey from "./TheripistSide/AddClientSurvey/index.js"
 import ClientProfile from './TheripistSide/CurrentClients/ClientProfile.js'
-// import ProtectedRoute from "./Auth/ProtectedRoute";
+import ProtectedRoute from "./Auth/ProtectedRoute";
 
 
 function App() {
@@ -17,9 +17,9 @@ function App() {
             <Switch>
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
-                <Route path="/dashboard" component={TheripistDash} />
-                <Route path="/addclient" component={AddClientSurvey} />
-                <Route path="/clientProfile" component ={ClientProfile}/>
+                <ProtectedRoute path="/dashboard" component={TheripistDash} />
+                <ProtectedRoute path="/addclient" component={AddClientSurvey} />
+                <ProtectedRoute path="/clientProfile" component ={ClientProfile}/>
                 {/* <ProtectedRoute  path="/theripistdash" component={Theripist} />
                 <ProtectedRoute path="/studentdash" component={Student} /> */}
                 <Route exact path="/" component={Login}/>

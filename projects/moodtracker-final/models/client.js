@@ -27,22 +27,22 @@ const clientSchema = new Schema({
     }
 });
 
-clientSchema.pre("save", function (next) {
-    const client = this;
-    if (!client.isModified("clientCode")) return next();
-    bcrypt.hash(client.clientCode, 10, (err, hash) => {
-        if (err) return next(err);
-        client.clientCode = hash;
-        next();
-    });
-});
+// clientSchema.pre("save", function (next) {
+//     const client = this;
+//     if (!client.isModified("clientCode")) return next();
+//     bcrypt.hash(client.clientCode, 10, (err, hash) => {
+//         if (err) return next(err);
+//         client.clientCode = hash;
+//         next();
+//     });
+// });
 
-clientSchema.methods.checkClientCode = function (codeAttempt, callback) {
-    bcrypt.compare(codeAttempt, this.clientCode, (err, isMatch) => {
-        if (err) return callback(err);
-        callback(null, isMatch);
-    });
-};
+// clientSchema.methods.checkClientCode = function (codeAttempt, callback) {
+//     bcrypt.compare(codeAttempt, this.clientCode, (err, isMatch) => {
+//         if (err) return callback(err);
+//         callback(null, isMatch);
+//     });
+// };
 
 clientSchema.pre("save", function (next) {
     const client = this;
@@ -61,11 +61,13 @@ clientSchema.methods.checkPassword = function (passwordAttempt, callback) {
     });
 };
 
-clientSchema.methods.withoutclientCode = function () {
-    const client = this.toObject();
-    delete client.clientCode;
-    return client;
-};
+
+// clientSchema.methods.withoutclientCode = function () {
+//     const client = this.toObject();
+//     delete client.clientCode;
+//     return client;
+// };
+
 clientSchema.methods.withoutPassword = function () {
     const user = this.toObject();
     delete user.password;

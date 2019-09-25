@@ -48,6 +48,16 @@ export class AppProvider extends Component {
                 return response;
             })
     }
+    logout = () => {
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+        this.setState({
+            clients: [],
+            user: {},
+            token: ""
+        })
+    }
+
      addClient = (newClient) => {
         return clientAxios.post("/api/client/", newClient)
             .then(response => {
@@ -56,6 +66,17 @@ export class AppProvider extends Component {
                 });
                 return response;
             })
+     }
+
+    getClients = () => {
+        return clientAxios.get("/api/client")
+            .then(response => {
+                this.setState({clients: response.data });
+                return response;
+            })
+            .catch(err => {
+                console.log(err)
+            }) 
     }
 
     render() {
@@ -64,6 +85,8 @@ export class AppProvider extends Component {
                 value={{
                     signup: this.signup,
                     login: this.login,
+                    logout: this.logout,
+                    getClients:this.getClients,
                     addClient:this.addClient,
                     ...this.state
                 }}

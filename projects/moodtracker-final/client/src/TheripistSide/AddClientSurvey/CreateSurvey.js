@@ -53,11 +53,8 @@ class CreateSurvey extends Component {
                         <label for="extraQuestion">Add a question based on your client's needs</label>
                         <input type="text" value={this.state.extraQuestion}name="extraQuestion" id="extraQuestion" onChange={this.handleChange} placeholder="ex: Did you eat today?" />
                     </div>
-                    <button className="add-new-button survey-button" onSubmit={this.handleSubmit}>Add Survey</button>
-            
             </div>
         )
     }
 }
-
 export default CreateSurvey             

@@ -21,7 +21,12 @@
     width:30vw;
     text-align:center;
 }
-
+.not-selected{
+    background-color:white;
+}
+.selected{
+    background-color:purple;
+}
 .auth-input{
     height: 10vh;
     border-bottom:solid black 2px;

@@ -8,13 +8,23 @@ class Signup extends Component {
         this.state = {
             username: "",
             password: "",
-            isTheripist: false,
+            isStudent: false,
             code: "",
             errorMessage: "",
         }
     }
-    handleUserType = () => {
-        
+
+    isStudent = () => {
+        this.setState({
+            isStudent: true,
+        })
+    }
+    
+
+    isTheripist = () => {
+        this.setState({
+            isStudent: false,
+        })
     }
 
     handleChange = (e) => {
@@ -28,7 +38,7 @@ class Signup extends Component {
         this.setState({
             username: "",
             password: "",
-            isTheripist: false,
+            isStudent: false,
             code: "",
             errorMessage: ""
         })
@@ -36,6 +46,7 @@ class Signup extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        //if isStudent is true then this .props.history needs to push to /client Dash and a client signup.
         this.props.signup(this.state)
             .then(() => this.props.history.push("/dashboard"))
             .catch(err => {
@@ -46,14 +57,22 @@ class Signup extends Component {
         return (
             <div className="auth-container">
                 <form className="auth-form" onSubmit={this.handleSubmit}>
-                    <div className="user-type-container">
-                        <div className="user-type" onClick={this.handleUserType}>Theripist</div>
-                        <div className="user-type" onClick={this.handleUserType}>Student</div>
+                     <div className="user-type-container">
+                        <div className={
+                            this.state.isStudent ? "user-type not-selected": " user-type selected"} 
+                            onClick={this.isTheripist}>Theripist</div>
+                        <div className={
+                            this.state.isStudent ? "user-type selected": "user-type not-selected"} onClick={this.isStudent}>Student</div>
                     </div>
                     <input className="auth-input" onChange={this.handleChange} value={this.state.username} name="username" type="text" placeholder="username" />
                     <input className="auth-input" onChange={this.handleChange} value={this.state.password} name="password" type="text" placeholder="password" />
-                    {/* if isTheripist false then render student-code */}
-                    {/* <input className="auth-input student-code" value="" name="student-code" type="text" placeholder="code" /> */}
+                     {
+                        this.state.isStudent
+                            ?
+                            <input className="auth-input student-code" onChange={this.handleChange} value={this.state.code}  name="code" type="text" placeholder="code" />
+                            :
+                            <div></div>
+                    }
                     <label className="remember-switch">
                         <input className="no-input" type="checkbox" />
                         <span className="slider" />

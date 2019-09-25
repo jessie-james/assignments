@@ -9,6 +9,11 @@ require("dotenv").config();
 app.use("/", express.json())
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
 
+
+app.use("/auth", require("./routes/auth"));
+// app.use("/api/survey", require("./routes/moodsurvey"));
+app.use("/api/client", require("./routes/client"));
+
 mongoose.connect("mongodb://localhost:27017/moodtracker",
     {
         useNewUrlParser: true,
@@ -19,11 +24,6 @@ mongoose.connect("mongodb://localhost:27017/moodtracker",
         console.log("Connected to the moodtracker db");
     }
 );
-
-app.use("/auth", require("./routes/auth"));
-// app.use("/api/survey", require("./routes/moodsurvey"));
-app.use("/api/client", require("./routes/client"));
-
 
 app.use((err, req, res, next) => {
     console.error(err);

@@ -3,12 +3,12 @@ const clientRouter = express.Router();
 const Client = require("../models/client.js");
 
 clientRouter.get("/", (req, res, next) => {
-    Client.find({ user: req.user._id }, (err, clientss) => {
+    Client.find({ user: req.user._id }, (err, clients) => {
         if (err) {
             res.status(500);
             return next(err);
         }
-        return res.send(clientss);
+        return res.send(clients);
     });
 });
 
