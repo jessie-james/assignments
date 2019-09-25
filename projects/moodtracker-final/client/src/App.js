@@ -17,7 +17,7 @@ function App() {
             <Switch>
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
-                <ProtectedRoute path="/dashboard" component={TheripistDash} />
+                <ProtectedRoute path="/theripistdashboard" component={TheripistDash} />
                 <ProtectedRoute path="/addclient" component={AddClientSurvey} />
                 <ProtectedRoute path="/clientProfile" component ={ClientProfile}/>
                 {/* <ProtectedRoute  path="/theripistdash" component={Theripist} />

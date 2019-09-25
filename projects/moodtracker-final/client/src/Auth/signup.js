@@ -48,7 +48,7 @@ class Signup extends Component {
         e.preventDefault();
         //if isStudent is true then this .props.history needs to push to /client Dash and a client signup.
         this.props.signup(this.state)
-            .then(() => this.props.history.push("/dashboard"))
+            .then(() => this.props.history.push("/theripistdashboard"))
             .catch(err => {
                 this.setState({ errorMessage: err.response.data.message })
             })

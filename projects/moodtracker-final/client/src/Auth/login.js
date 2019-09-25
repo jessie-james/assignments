@@ -46,12 +46,10 @@ class Login extends Component {
         })
     }
 
-   
-
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.login(this.state)
-            .then(() => this.props.history.push("/dashboard"))
+            .then(() => this.props.history.push("/theripistdashboard"))
             .catch(err => {
                 this.setState({ errorMessage: err.response.data.message })
             })

@@ -7,7 +7,6 @@ clientAxios.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${token}`;
     return config;
 })
-
 const App = React.createContext();
 
 export class AppProvider extends Component {
@@ -44,7 +43,6 @@ export class AppProvider extends Component {
                     user,
                     token
                 });
-                // this.getClients();
                 return response;
             })
     }
@@ -78,7 +76,42 @@ export class AppProvider extends Component {
                 console.log(err)
             }) 
     }
+    
+    getClient = (clientId) => {
+        return clientAxios.get(`/api/client/${clientId}`)
+            .then(response => {
+                return response;
+            })
+            .catch(err => {
+                console.log(err)
+            }) 
+    }
 
+    editClient = (clientId, client) => {
+        return clientAxios.put(`/api/client/${clientId}`, client)
+            .then(response => {
+                this.setState(prevState => {
+                    const updatedClients = prevState.clients.map(client => {
+                        return client._id === response.data._id ? response.data : client
+                    })
+                    return { clients: updatedClients }
+                })
+                return response;
+            })
+    }
+
+    deleteClient = (clientId) => {
+        return clientAxios.delete(`/api/client/${clientId}`)
+            .then(response => {
+                this.setState(prevState => {
+                    const updatedClients = prevState.clients.filter(client => {
+                        return client._id !== clientId
+                    })
+                    return { clients: updatedClients }
+                })
+                return response;
+            })
+    }
     render() {
         return (
             <App.Provider
@@ -87,7 +120,9 @@ export class AppProvider extends Component {
                     login: this.login,
                     logout: this.logout,
                     getClients:this.getClients,
-                    addClient:this.addClient,
+                    addClient: this.addClient,
+                    getClient: this.getClient,
+                    deleteClient:this.deleteClient,
                     ...this.state
                 }}
             >

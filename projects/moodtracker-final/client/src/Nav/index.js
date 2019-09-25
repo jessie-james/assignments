@@ -6,7 +6,7 @@ import { withContext } from "../AppContext"
 function Nav(props) {
     return (
         <div className="nav-bar-wrapper">
-            <div className="nav-title"><Link to="/dashboard">FUSH</Link></div>
+            <div className="nav-title"><Link to="/theripistdashboard">FUSH</Link></div>
                 {
                     props.token 
                     ? <div className="nav-link-container">

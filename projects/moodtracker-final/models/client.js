@@ -9,7 +9,7 @@ const clientSchema = new Schema({
     password: {
         type: String,
     },
-    clientImg: String,
+    clientImg:String,
     clientName: {
         type: String,
         required: true,
