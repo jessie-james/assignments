@@ -4,6 +4,10 @@
 .welcome-message{
     font-size:20pt;
 }
+.welcome-message>span {
+    color:#6C558C;
+    text-shadow: 5px 5px 3px rgba(108, 85, 140, 0.596);
+}
 .add-Client-link{
     display:flex;
     margin: 2px 0px;

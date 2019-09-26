@@ -24,9 +24,8 @@ class ClientProfile extends Component {
                     <h3>{clientphoneNum}</h3>
                     <h3>{clientCode}</h3>
                 </div>
-                <ClientSurvey code={clientCode} />
                 <div className="p-icon" onClick={() => this.props.editClient(this.props.selectedClient._id)}><i className="fa fa-edit fa-x2"></i></div>
-                
+                <ClientSurvey code={clientCode} />
             </div>
         )
     }

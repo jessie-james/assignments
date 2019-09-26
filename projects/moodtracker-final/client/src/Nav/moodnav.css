@@ -29,4 +29,10 @@
     text-decoration: none;
     text-emphasis: none;
     padding:10px;
+    color:black;
+    border-radius:10px;
+}
+.nav-link>a:focus{
+    background-color: rgba(108, 85, 140, 0.418);
+
 }
