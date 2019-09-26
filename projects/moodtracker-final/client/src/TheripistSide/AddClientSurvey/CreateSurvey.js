@@ -1,12 +1,14 @@
 import React, { Component }from 'react';
 import './survey.css'
+import { withContext } from "../../AppContext"
 
 class CreateSurvey extends Component {
-    constructor() {
+    constructor(props) {
         super();
         this.state = {
             moodQuestion: "",
             extraQuestion: "",
+            clientCode:props.selectedClient.clientCode|| "missing Code",
             errorMessage: ""
         }
     }
@@ -28,10 +30,9 @@ class CreateSurvey extends Component {
     }
 
     handleSubmit = (e) => {
-        console.log("fired")
         e.preventDefault();
         this.props.addSurvey(this.state)
-            .then(() => this.props.history.push("/theripistdash"))
+            .then(() => this.props.history.push("/theripistdashboard"))
             .catch(err => {
                 this.setState({ errorMessage: err.response.data.message })
             })
@@ -40,7 +41,7 @@ class CreateSurvey extends Component {
     render() {
         return (
             <div className="add-client-survey">
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <div className="moodquestion-container questions-container">
                         <label>Customize your mood question</label>
                         <input type="text" value={this.state.moodQuestion} name="moodQuestion" id="moodQuestion" onChange={this.handleChange} placeholder="ex: How do you feel?" />
@@ -67,4 +68,4 @@ class CreateSurvey extends Component {
         )
     }
 }
-export default CreateSurvey             
+export default withContext(CreateSurvey )            

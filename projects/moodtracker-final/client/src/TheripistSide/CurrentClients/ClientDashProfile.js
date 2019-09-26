@@ -4,8 +4,8 @@ import './clientDashProfile.css'
 import { withContext } from "../../AppContext"
 
 function ClientDashProfile(props) {
-    console.log(props)
     const { _id } = props.client 
+    
     return (
         <div className="profileTab-container">
             <div className="basic-client-info">

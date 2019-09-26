@@ -3,19 +3,19 @@ const Schema = mongoose.Schema;
 
 const surveySchema = new Schema({
     moodQuestion: {
-        type: Array,
+        type: String,
         required: true,
     },
     extraQuestion: {
-        type: Array,
+        type: String,
         required: true,
     },
+    clientCode:String,
     user: {
         type: Schema.Types.ObjectId,
-        ref: "Theripist",
+        ref: "User",
         required: true,
     }
-
 });
 
 module.exports = mongoose.model("MoodSurvey", surveySchema);

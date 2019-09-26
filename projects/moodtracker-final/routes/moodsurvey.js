@@ -11,8 +11,12 @@ surveyRouter.get("/", (req, res, next) => {
         return res.send(surveys);
     });
 });
+// surveyRouter.get("/:clientcode", (req, res, next) => {
+//     MoodSurvey.find({ user: req.user._id }, (err, surveys) => {
+//         if (err) {
 
 surveyRouter.post("/", (req, res, next) => {
+    console.log(req.body)
     const survey = new MoodSurvey(req.body);
     survey.user = req.user._id;
     survey.save(function (err, newSurvey) {

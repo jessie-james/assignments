@@ -31,12 +31,15 @@ class AddClient extends Component {
             clientName: "",
             clientphoneNum: "",
             clientCode: "",
+            errorMessage: "",
         })
     }
 
     handleSubmit = (e) => {     
         e.preventDefault();
+        console.log(this.props)
         this.props.addClient(this.state)
+        // this.props.getClient(this.props.selectedClient._id)
             .then(() => this.props.history.push("/addsurvey"))
             .catch(err => {
                 this.setState({ errorMessage: err.response.data.message })

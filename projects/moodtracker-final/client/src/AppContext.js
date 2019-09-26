@@ -20,12 +20,18 @@ export class AppProvider extends Component {
         super()
         this.state = {
             clients: [],
-            surveys:[],
+            surveys: [],
             selectedClient: {
-                clientImg: "aaa",
-                clientName: "aaa",
-                clientphoneNum: "aaa",
-                clientCode: "aaa",
+                clientImg: "N/A",
+                clientName: "N/A",
+                clientphoneNum: "N/A",
+                clientCode: "N/A",
+            },
+            selectedCode:"",
+            selectedSurvey: {
+                moodQuestion: "N/A",
+                extraQuestion: "N/A",
+                clientCode: "N/A",
             },
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || ""
@@ -34,9 +40,9 @@ export class AppProvider extends Component {
 
     componentDidMount() {
         this.getClients();
+        this.getSurveys();
         
     }
-
     signup = (userInfo) => {
         return clientAxios.post("/auth/signup", userInfo)
             .then(response => {
@@ -47,7 +53,6 @@ export class AppProvider extends Component {
                     user,
                     token
                 });
-                // this.getClients();
                 return response;
             })
     }
@@ -75,15 +80,15 @@ export class AppProvider extends Component {
         })
     }
 
-     addClient = (newClient) => {
+    addClient = (newClient) => {
         return clientAxios.post("/api/client/", newClient)
             .then(response => {
                 this.setState(prevState => {
-                    return {clients: [...prevState.clients, response.data] }
+                    return { clients: [...prevState.clients, response.data], selectedClient: response.data }
                 });
-                return response;
+                return console.log(response.data);
             })
-     }
+    }
     
 
     getClients = () => {
@@ -94,19 +99,18 @@ export class AppProvider extends Component {
             })
             .catch(err => {
                 console.log(err)
-            }) 
+            })
     }
 
     
     getClient = (clientId) => {
         if (clientId && this.state.clients.length > 0) {
-            console.log(clientId)
             const selected = this.state.clients.find(function (selected) {
                 return selected._id === clientId;
             })
             this.setState({
                 selectedClient: selected
-            })   
+            })
         }
         //send back to dash. push hsitory / theripist dash
     }
@@ -136,27 +140,59 @@ export class AppProvider extends Component {
                 return response;
             })
     }
+
     addSurvey = (newSurvey) => {
-        console.log("fired")
         return surveyAxios.post("/api/survey/", newSurvey)
             .then(response => {
                 this.setState(prevState => {
-                    return { surveys: [...prevState.clients, response.data] }
+                    return { surveys: [...prevState.surveys, response.data] }
                 });
                 return response;
             })
     
 
     }
+    getSurveys = () => {
+        return clientAxios.get("/api/survey")
+            .then(response => {
+                this.setState({ surveys: response.data });
+                return response;
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    getSurvey = (clientCode) => {
+        console.log(clientCode)
+        const selectSurvey = this.state.surveys.find(function (selectSurvey) {
+            return selectSurvey.clientCode === clientCode;
+        })
+        this.setState({
+            selectedSurvey: selectSurvey
+        })
+    }
+    //send back to dash. push hsitory / theripist dash
+    
+    getSurvey = (suveyId) => {
+        return surveyAxios.get("/api/survey")
+            .then(response => {
+                this.setState({ surveys: response.data });
+                return response;
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     render() {
-        console.log(this.state)
         return (
             <App.Provider
                 value={{
                     signup: this.signup,
                     login: this.login,
                     logout: this.logout,
-                    getClients:this.getClients,
+                    getClients: this.getClients,
                     addClient: this.addClient,
                     getClient: this.getClient,
                     deleteClient: this.deleteClient,
