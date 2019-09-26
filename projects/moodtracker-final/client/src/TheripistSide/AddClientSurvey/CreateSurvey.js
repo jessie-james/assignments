@@ -28,11 +28,10 @@ class CreateSurvey extends Component {
     }
 
     handleSubmit = (e) => {
+        console.log("fired")
         e.preventDefault();
-        this.props.addMoodSurvey(this.state)
-            .then(response => {
-                this.clearInputs()
-            })
+        this.props.addSurvey(this.state)
+            .then(() => this.props.history.push("/theripistdash"))
             .catch(err => {
                 this.setState({ errorMessage: err.response.data.message })
             })
@@ -41,6 +40,7 @@ class CreateSurvey extends Component {
     render() {
         return (
             <div className="add-client-survey">
+                <form>
                     <div className="moodquestion-container questions-container">
                         <label>Customize your mood question</label>
                         <input type="text" value={this.state.moodQuestion} name="moodQuestion" id="moodQuestion" onChange={this.handleChange} placeholder="ex: How do you feel?" />
@@ -53,13 +53,16 @@ class CreateSurvey extends Component {
                         </div>
                     </div>
                     <div className="extra-Question questions-container">
-                        <label for="extraQuestion">Add a question based on your client's needs</label>
+                        <label>Add a question based on your client's needs</label>
                         <input type="text" value={this.state.extraQuestion}name="extraQuestion" id="extraQuestion" onChange={this.handleChange} placeholder="ex: Did you eat today?" />
-                </div>
+                    </div>
+                    <button className="add-new-button client-button" onSubmit={this.handleSubmit}>Add New Survey</button>
+                </form>
                 {
                     this.state.errorMessage &&
                     <p style={{ color: "red" }}>{this.state.errorMessage}</p>
                 }
+                
             </div>
         )
     }

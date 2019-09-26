@@ -7,10 +7,9 @@
 
 .nav-title>a{
     font-size:25pt;
-    /* gonna be a logo */
     font-weight:bold;
     color:#6C558C;
-    text-shadow: 3.5px 2px rgba(81, 64, 105, 0.472);
+    text-shadow: 6px 6px #AFA8BF;
     
 }
 .nav-title>a:active{

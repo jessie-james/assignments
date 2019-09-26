@@ -11,7 +11,7 @@ app.use("/api", expressJwt({ secret: process.env.SECRET }));
 
 
 app.use("/auth", require("./routes/auth"));
-// app.use("/api/survey", require("./routes/moodsurvey"));
+app.use("/api/survey", require("./routes/moodsurvey"));
 app.use("/api/client", require("./routes/client"));
 
 mongoose.connect("mongodb://localhost:27017/moodtracker",

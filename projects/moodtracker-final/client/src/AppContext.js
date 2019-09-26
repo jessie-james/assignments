@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
 const clientAxios = axios.create();
+const surveyAxios = axios.create();
 
 clientAxios.interceptors.request.use((config) => {
+    const token = localStorage.getItem("token");
+    config.headers.Authorization = `Bearer ${token}`;
+    return config;
+})
+surveyAxios.interceptors.request.use((config) => {
     const token = localStorage.getItem("token");
     config.headers.Authorization = `Bearer ${token}`;
     return config;
@@ -14,6 +20,7 @@ export class AppProvider extends Component {
         super()
         this.state = {
             clients: [],
+            surveys:[],
             selectedClient: {
                 clientImg: "aaa",
                 clientName: "aaa",
@@ -77,6 +84,7 @@ export class AppProvider extends Component {
                 return response;
             })
      }
+    
 
     getClients = () => {
         return clientAxios.get("/api/client")
@@ -128,6 +136,18 @@ export class AppProvider extends Component {
                 return response;
             })
     }
+    addSurvey = (newSurvey) => {
+        console.log("fired")
+        return surveyAxios.post("/api/survey/", newSurvey)
+            .then(response => {
+                this.setState(prevState => {
+                    return { surveys: [...prevState.clients, response.data] }
+                });
+                return response;
+            })
+    
+
+    }
     render() {
         console.log(this.state)
         return (
@@ -139,7 +159,8 @@ export class AppProvider extends Component {
                     getClients:this.getClients,
                     addClient: this.addClient,
                     getClient: this.getClient,
-                    deleteClient:this.deleteClient,
+                    deleteClient: this.deleteClient,
+                    addSurvey: this.addSurvey,
                     ...this.state
                 }}
             >
