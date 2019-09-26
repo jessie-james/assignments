@@ -7,6 +7,7 @@ class CreateSurvey extends Component {
         this.state = {
             moodQuestion: "",
             extraQuestion: "",
+            errorMessage: ""
         }
     }
 
@@ -22,6 +23,7 @@ class CreateSurvey extends Component {
         this.setState({
             moodQuestion: "",
             extraQuestion: "",
+            errorMessage: ""
         })
     }
 
@@ -31,7 +33,9 @@ class CreateSurvey extends Component {
             .then(response => {
                 this.clearInputs()
             })
-            .catch(err => console.error(err.response.data.message))
+            .catch(err => {
+                this.setState({ errorMessage: err.response.data.message })
+            })
     }
 
     render() {
@@ -51,7 +55,11 @@ class CreateSurvey extends Component {
                     <div className="extra-Question questions-container">
                         <label for="extraQuestion">Add a question based on your client's needs</label>
                         <input type="text" value={this.state.extraQuestion}name="extraQuestion" id="extraQuestion" onChange={this.handleChange} placeholder="ex: Did you eat today?" />
-                    </div>
+                </div>
+                {
+                    this.state.errorMessage &&
+                    <p style={{ color: "red" }}>{this.state.errorMessage}</p>
+                }
             </div>
         )
     }

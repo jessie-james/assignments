@@ -12,6 +12,8 @@ class AddClientSurvey extends Component {
             clientName: "",
             clientphoneNum: "",
             clientCode: "",
+            errorMessage:"",
+            
         }
     }
 
@@ -36,7 +38,9 @@ class AddClientSurvey extends Component {
         e.preventDefault();
         this.props.addClient(this.state)
             .then(() => this.props.history.push("/theripistdashboard"))
-            .catch(err => console.error(err.response.data.message))
+            .catch(err => {
+                this.setState({ errorMessage: err.response.data.message })
+            })
     }
     render() {
         return (
@@ -52,6 +56,10 @@ class AddClientSurvey extends Component {
                     <CreateSurvey />
                     <button className="add-new-button client-button" onSubmit={this.handleSubmit}>Add New Client</button>
                 </form>
+                {
+                    this.state.errorMessage &&
+                    <p style={{ color: "red" }}>{this.state.errorMessage}</p>
+                }
             </div>
         )
     }

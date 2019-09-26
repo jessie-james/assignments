@@ -52,7 +52,6 @@
     width: 75px;
     height: 28px;
 }
-
 .no-input{
     opacity: 0;
     width: 0;
@@ -92,7 +91,6 @@ input:focus+.slider {
 input:checked+.slider:before {
     transform: translateX(45px);
 }
-
 .auth-button{
     margin:30px;
     text-align: center;
@@ -104,8 +102,11 @@ input:checked+.slider:before {
     padding:5px;
     color:#F2F2F2;
     background-color:#5A368C;
-    box-shadow:5px 5px 5px #5A368C;
+    box-shadow:6px 6px 10px #5A368C;
     
+}
+.auth-button:active{
+    box-shadow:2px 2px 5px rgb(74, 44, 116);
 }
     
     

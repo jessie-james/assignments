@@ -18,12 +18,16 @@
     align-items: center;
     margin:20px;
     border: grey 2px solid;
+    border-radius:20px;
+    padding:20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.26);
+
 }
 
 .questions-container{
     display:flex;
     flex-direction: column;
-    border-bottom:grey 2px solid;
+    border-bottom:#5A368C 2px solid;
     padding:5px;
     justify-content: center;
     align-items: center;
@@ -35,6 +39,10 @@
       border:grey 1px solid;
       height: 25px;
       padding: 5px;
+      width:150px;
+      border-radius:10px;
+      margin:10px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.26);
 }
 .emoji{
     width:25px;

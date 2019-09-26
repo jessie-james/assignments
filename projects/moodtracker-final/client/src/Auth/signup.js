@@ -80,6 +80,10 @@ class Signup extends Component {
                     <span className="remember-text">Remember password</span>
                     <button className="auth-button" type="submit" onSubmit={this.handleSubmit}>Sign Up</button>
                 </form>
+                {
+                    this.state.errorMessage &&
+                    <p style={{ color: "red" }}>{this.state.errorMessage}</p>
+                }
             </div>
         )
     }

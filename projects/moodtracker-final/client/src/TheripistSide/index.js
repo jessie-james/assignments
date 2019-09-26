@@ -11,7 +11,7 @@ class TheripistDash extends Component {
         const mappedClients = this.props.clients.map((client) => <ClientDashProfile key={client._id} client={client} editClient={this.props.editClient} class='profileTab-container' />)
         return (
             <div className="dashContainer">
-                <div>Welcome,<span> {this.props.user.username}</span></div>
+                <div className="welcome-message">Welcome,<span> {this.props.user.username}</span></div>
                 {mappedClients}
                 <div className="add-Client-link">
                     <Link className="add-div" to="/addclient">+</Link>
