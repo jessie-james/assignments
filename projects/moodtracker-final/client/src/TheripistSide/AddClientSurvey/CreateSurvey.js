@@ -37,9 +37,8 @@ class CreateSurvey extends Component {
     render() {
         return (
             <div className="add-client-survey">
-                
                     <div className="moodquestion-container questions-container">
-                        <label for="moodQuestion">Customize your mood question</label>
+                        <label>Customize your mood question</label>
                         <input type="text" value={this.state.moodQuestion} name="moodQuestion" id="moodQuestion" onChange={this.handleChange} placeholder="ex: How do you feel?" />
                         <div className="emoj-container">
                             <img alt="emoji-img" className="emoji" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Very_Sad_Face_Emoji_Icon_ios10_large.png?v=1542436019" />

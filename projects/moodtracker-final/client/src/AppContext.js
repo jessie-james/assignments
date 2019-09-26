@@ -15,7 +15,10 @@ export class AppProvider extends Component {
         this.state = {
             clients: [],
             selectedClient: {
-                user:""
+                clientImg: "aaa",
+                clientName: "aaa",
+                clientphoneNum: "aaa",
+                clientCode: "aaa",
             },
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || ""
@@ -24,6 +27,7 @@ export class AppProvider extends Component {
 
     componentDidMount() {
         this.getClients();
+        
     }
 
     signup = (userInfo) => {
@@ -87,13 +91,16 @@ export class AppProvider extends Component {
 
     
     getClient = (clientId) => {
-        console.log(clientId)
-        const selected = this.state.clients.find(function (selected) {
-            return selected._id === clientId;
-        })
-        this.setState({
-            selectedClient: selected
-        })  
+        if (clientId && this.state.clients.length > 0) {
+            console.log(clientId)
+            const selected = this.state.clients.find(function (selected) {
+                return selected._id === clientId;
+            })
+            this.setState({
+                selectedClient: selected
+            })   
+        }
+        //send back to dash. push hsitory / theripist dash
     }
    
     editClient = (clientId, client) => {
@@ -122,6 +129,7 @@ export class AppProvider extends Component {
             })
     }
     render() {
+        console.log(this.state)
         return (
             <App.Provider
                 value={{
