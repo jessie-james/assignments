@@ -82,7 +82,7 @@ class Signup extends Component {
                 </form>
                 {
                     this.state.errorMessage &&
-                    <p style={{ color: "red" }}>{this.state.errorMessage}</p>
+                    <p className="error-message-moodtracker">{this.state.errorMessage}</p>
                 }
             </div>
         )

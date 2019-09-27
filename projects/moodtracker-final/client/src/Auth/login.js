@@ -84,7 +84,8 @@ class Login extends Component {
                 </form>
                 {
                     this.state.errorMessage &&
-                    <p style={{ color: "red" }}>{this.state.errorMessage}</p>
+                    <p style={{ color: "red", textAlign: "center",justifyContent:"center",
+                        alignItems:"center" }}>{this.state.errorMessage}</p>
                 }
             </div>
         )

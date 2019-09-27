@@ -34,7 +34,7 @@ class CreateSurvey extends Component {
         this.props.addSurvey(this.state)
             .then(() => this.props.history.push("/theripistdashboard"))
             .catch(err => {
-                this.setState({ errorMessage: err.response.data.message })
+                this.setState({ errorMessage: "Both Questions are required" })
             })
     }
 
@@ -61,7 +61,7 @@ class CreateSurvey extends Component {
                 </form>
                 {
                     this.state.errorMessage &&
-                    <p style={{ color: "red" }}>{this.state.errorMessage}</p>
+                    <p className="error-message-moodtracker">{this.state.errorMessage}</p>
                 }
                 
             </div>

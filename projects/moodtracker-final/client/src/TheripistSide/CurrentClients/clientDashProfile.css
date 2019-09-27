@@ -30,6 +30,7 @@ margin:10px;
 .profile-icons{
     display:flex;
     justify-content: space-evenly;
+    height:30px;
 }
 .profile-icons>a{
     color:#5A368C;

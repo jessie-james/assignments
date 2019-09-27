@@ -6,6 +6,15 @@
     height:100%;
     
 }
+.error-message-moodtracker{
+    color:red;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size:10pt;
+    width:70%;
+}
 .add-client-img{
     margin: 20px;
     width:50px;

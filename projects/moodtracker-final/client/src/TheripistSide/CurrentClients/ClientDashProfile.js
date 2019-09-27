@@ -23,7 +23,7 @@ function ClientDashProfile(props) {
                 <div className="p-icon" onClick={() => props.deleteClient(props.client._id)}><i className="fa fa-poll fa-x2"></i></div>
                 <div className="p-icon" onClick={() => props.deleteClient(props.client._id)}><i className="fa fa-trash "></i></div>
                 <div className="p-icon" onClick={() => props.editClient(props.client._id)}><i className="fa fa-edit fa-x2"></i></div>
-                <Link to={`/clientProfile/${_id}`} className="p-icon" client={props.client}>Profile</Link>
+                <Link to={`/clientProfile/${_id}`} className="p-icon" client={props.client}><button className="profile-button">Profile</button></Link>
             </div>
         </div>
     )

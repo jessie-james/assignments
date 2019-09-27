@@ -42,7 +42,7 @@ class AddClient extends Component {
         // this.props.getClient(this.props.selectedClient._id)
             .then(() => this.props.history.push("/addsurvey"))
             .catch(err => {
-                this.setState({ errorMessage: err.response.data.message })
+                this.setState({ errorMessage: "Name and Code are required. Code must be uniqe" })
             })
     }
     render() {
@@ -60,7 +60,10 @@ class AddClient extends Component {
                 </form>
                 {
                     this.state.errorMessage &&
-                    <p style={{ color: "red" }}>{this.state.errorMessage}</p>
+                    <p style={{
+                        color: "red", textAlign: "center", justifyContent: "center",
+                        alignItems: "center", width: "70%", display: "flex", margin: "20px"
+                    }}>{this.state.errorMessage}</p>
                 }
             </div>
         )
