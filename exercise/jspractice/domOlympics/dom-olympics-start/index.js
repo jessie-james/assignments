@@ -11,7 +11,8 @@ g.classList.add("name");
 g.appendChild(f);
 newDiv.appendChild(g); 
 
-// <div><g=span>JessMae=f<span>< div>
+
+//<div><span class=name>"jess Mae"</span></div>
 
 
 
@@ -66,6 +67,7 @@ send.addEventListener("click", function (event) {
     input = document.querySelector("#input").value;
     message.innerHTML = input;
 })
+
 
 
   

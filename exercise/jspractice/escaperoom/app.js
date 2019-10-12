@@ -3,7 +3,7 @@ var readlineSync = require("readline-sync")
 
 // readlineSync.question("question ");
 
-let desicion1 = readlineSync.question("You have 3 options please pick one. 1.put hand in hole.  2 Find the key. 3. open the door. what do you choose?? one, two, or three");
+let desicion1 =   readlineSync.question("You have 3 options please pick one. 1.put hand in hole.  2 Find the key. 3. open the door. what do you choose?? one, two, or three");
 
 function doYouHaveKey(pram1) {
     if (pram1 === "two") {
@@ -16,7 +16,8 @@ function doYouHaveKey(pram1) {
         doYouHaveKey(died)
     }
     else{
-        let desicion1 = readlineSync.question("You have 3 options please pick one. 1.put key in hole.  2 Find the key. 3. open the door. what do you choose?? one, two, or three");
+        desicion1 
+            // readlineSync.question("You have 3 options please pick one. 1.put key in hole.  2 Find the key. 3. open the door. what do you choose?? one, two, or three");
         doYouHaveKey(desicion1)
         }
 }

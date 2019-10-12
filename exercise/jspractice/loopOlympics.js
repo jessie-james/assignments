@@ -104,22 +104,34 @@ for (i = 0; i < 4; i++) {
     square2.push([])
     for (j = 0; j < 4; j++) {
         square2[i].push(j)
-
-
-
     }
 }
 const square3 = []
-for (i = 0; i < 4; i++) {
+for (i = 0; i < 6; i++) {
     square3.push([])
-    for (j = 0; j < 4; j++) {
-        square3[i].push("x")
+    for (j = 0; j < 10; j++) {
+        square3[i].push(j)
 
 
 
-    }
-}
-console.log(square)
-console.log(square1)
-console.log(square2)
+//     }
+// }
+// // console.log(square)
+// // console.log(square1)
+// // console.log(square2)
 console.log(square3)
+
+
+// var matrix = [
+//     [5, 8],
+//     [9, 3],
+//     [6, 7]
+// ]
+// var theMatrix = 
+
+// for (i = 0; i < matrix.length; i++){
+//     for (j = 0; j < matrix.length; j++) {
+//         theMatrix.push(matrix[j])
+//     }
+// }
+// console.log(theMatrix)

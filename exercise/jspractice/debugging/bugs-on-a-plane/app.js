@@ -2,8 +2,7 @@ var form = document.getElementById("airline-form");
 var submit = document.getElementById("submit");
 
 submit.addEventListener("click", function() {
-    event.preventDefault()
-
+    event.preventDefault() 
     var firstName = form.elements["first-name"].value;
     var lastName = form.elements["last-name"].value;
     var age = form.elements["age"].value;
