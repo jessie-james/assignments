@@ -1,0 +1,39 @@
+body {
+    font-family: mario;
+    text-align: center;
+    font-size: 40px;
+
+}
+@font-face {
+    font-family: mario;
+    src: url(SuperMario256.ttf);
+    
+}
+.square {
+    height: 70px;
+    border: 3px solid #000000;
+}
+.pink {
+    background-color:pink ;
+}
+.dark-pink {
+    background-color:deeppink ;
+}
+.blue {
+    background-color: blue ;
+}
+.green {
+   background-color: green;
+}
+.orange {
+    background-color: orange;
+}
+.white {
+    background-color: white;
+}
+.box {
+    height: 50px;
+    border: 3px solid #000000;
+}
+
+
