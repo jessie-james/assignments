@@ -1,4 +1,4 @@
-$(document).ready(function () {
+ $(document).ready(function () {
     var whichColor = '';
     var rows = 10;
     var columns = 12;
