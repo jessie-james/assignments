@@ -1,3 +1,8 @@
 *{
-    margin:none
+    margin:0;
+}
+.full-app-container{
+    height:900px;
+    width: 100vw;
+    
 }
