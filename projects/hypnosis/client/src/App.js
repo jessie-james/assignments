@@ -9,10 +9,10 @@ function App() {
         <div className="full-app-container">
             <Switch>
                 <Route path="/home" component={LandingPage}/>
-                {/* <Route>signin log up</Route>
+                <Route>signin log up</Route>
                 <Route>program options</Route>
                 <Route>scheudle now</Route>
-                <Route>admin Home</Route> */}
+                <Route>admin Home</Route>
                 <Route exact path="/" component={LandingPage}/>
             </Switch>
             <Nav/>

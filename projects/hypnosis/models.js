@@ -27,7 +27,12 @@ const userSchema = new Schema({
             time: Number,
             program: String,
         },
-        ThirdAppointment: {
+        thirdAppointment: {
+            date: Number,
+            time: Number,
+            program: String,
+        },
+        fourthAppointment: {
             date: Number,
             time: Number,
             program: String,
