@@ -1,0 +1,10 @@
+*{
+    margin:none;
+    padding: none
+}
+h1{ 
+    color:rgb(152, 152, 182);
+}
+.containter{
+    background-color: blueviolet;
+}
